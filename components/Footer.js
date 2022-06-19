@@ -9,9 +9,9 @@ import {
 
 const Footer = () => {
   return (
-    <div className="fixed bottom-0 left-0 z-[101] w-full bg-red-700 py-3">
+    <div className="fixed bottom-0 left-0 z-[101] w-full bg-red-700 h-[10vh]">
       <Container>
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
           <div>
             <p>2022</p>
             <p>447 Sutter St 405 PMB 4 San Francisco, CA 96108</p>

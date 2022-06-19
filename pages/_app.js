@@ -7,13 +7,7 @@ import "../styles/fullpage.css";
 import "../styles/layout.scss";
 import "../styles/react-logo.scss";
 import "../styles/startup.scss";
-// import "../styles/background.scss";
 // import "../styles/content.scss";
-// import "../styles/lettering.css";
-// import "../styles/mouse.scss";
-// import "../styles/nav.scss";
-// import "../styles/page.css";
-// import "../styles/section.css";
 import "../styles/globals.css";
 import "../assets/font/stylesheet.css";
 

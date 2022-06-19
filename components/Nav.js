@@ -18,7 +18,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
   return (
     <header className="fixed top-0 left-0 z-[101] w-full bg-black">
       <Container>
-        <nav className="flex items-center justify-between flex-wrap py-6">
+        <nav className="flex items-center justify-between flex-wrap h-[10vh]">
           <div className="flex items-center flex-shrink-0 text-white mr-6">
             <span className="font-semibold text-xl tracking-tight">
               Tailwind CSS
