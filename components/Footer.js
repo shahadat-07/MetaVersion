@@ -14,7 +14,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="fixed bottom-0 left-0 z-[101] w-full bg-[#131A17] py-2 rounded-lg shadow">
-      <Container className="flex items-center justify-between h-[10vh]">
+      <Container className="flex items-center justify-between h-[8vh] md:h-[10vh]">
         {" "}
         <div className="flex-1 text-sm text-gray-500">
           <div className="flex space-x-2 items-center mb-1 md:mb-2">

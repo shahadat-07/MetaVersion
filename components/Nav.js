@@ -23,16 +23,16 @@ const Nav = withNavigationContext(({ fullpage }) => {
       className="fixed top-0 left-0 z-[101] w-full bg-[#131A17]"
     >
       <Container>
-        <nav className="flex items-center justify-between flex-wrap h-[10vh]">
+        <nav className="flex items-center justify-between flex-wrap h-[6vh] md:h-[10vh]">
           <div className="flex items-center flex-shrink-0 text-white mr-6">
-            <span className="font-medium text-2xl tracking-tight font-narrow">
+            <span className="font-medium text-lg md:text-2xl tracking-tight font-narrow">
               Metavision
             </span>
           </div>
           <div className="block lg:hidden">
             <button
               onClick={toogle}
-              className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+              className="flex items-center px-2 md:px-3 py-1.5 md:py-2 border rounded text-white border-white hover:text-black hover:bg-white"
             >
               <svg
                 className="fill-current h-3 w-3"
