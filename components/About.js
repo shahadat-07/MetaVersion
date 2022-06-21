@@ -14,7 +14,7 @@ const About = withNavigationContext(({ fullpage }) => {
       className="w-[100vw] relative"
     >
       <PageLayout className="flex flex-col lg:flex-row items-center py-2 sm:py-0">
-        <div className="lg:flex-1 text-center mb-4 lg:mb-0">
+        <div className="lg:flex-1 text-center mb-3 lg:mb-0">
           <Image
             src={stoneHole}
             width={495}
@@ -23,7 +23,9 @@ const About = withNavigationContext(({ fullpage }) => {
           />
         </div>
         <div className="flex-1">
-          <HeadingOne className="mb-4 lg:mb-8">Dreams come true</HeadingOne>
+          <HeadingOne className="mb-3 md:mb-4 lg:mb-8">
+            Dreams come true
+          </HeadingOne>
           <p className="text-[#FBFBFB] text-sm sm:text-base mb-4 lg:mb-6">
             Each person on our planet dreams of something. Metavision breaks
             patterns and makes dreams come true. Complete decentralization and
