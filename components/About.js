@@ -14,7 +14,7 @@ const About = withNavigationContext(({ fullpage }) => {
       className="w-[100vw] relative"
     >
       <PageLayout className="flex flex-col lg:flex-row items-center">
-        <div className="flex-1 text-center">
+        <div className="lg:flex-1 text-center mb-4 lg:mb-0">
           <Image
             src={stoneHole}
             width={495}
