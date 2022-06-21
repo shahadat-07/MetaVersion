@@ -49,7 +49,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
               isBoxVisible.isBoxVisible ? "block" : "hidden"
             } w-full flex-grow lg:flex lg:items-center lg:w-auto`}
           >
-            <div className="flex flex-col lg:flex-row lg:flex-grow text-white font-semibold lg:space-x-4 text-[18px] font-narrow">
+            <div className="flex flex-col lg:flex-row lg:flex-grow text-white font-medium lg:space-x-4 text-[18px] font-narrow">
               <Link className={slug === "" ? "selected" : null} href="/">
                 Home
               </Link>
