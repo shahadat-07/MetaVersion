@@ -9,7 +9,8 @@ import "../styles/react-logo.scss";
 import "../styles/startup.scss";
 // import "../styles/content.scss";
 import "../styles/globals.css";
-import "../assets/font/stylesheet.css";
+import "../assets/pilat-narrow/stylesheet.css";
+import "../assets/pilat-extended/stylesheet.css";
 
 function App({ Component, pageProps }) {
   const router = useRouter();

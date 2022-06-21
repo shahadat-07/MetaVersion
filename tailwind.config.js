@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      narrow: ["Pilat Narrow", "Open Sans"],
+      extended: ["Pilat Extended", "Open Sans"],
+    },
   },
   plugins: [],
 };

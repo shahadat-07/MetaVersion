@@ -9,14 +9,13 @@ import {
 
 const Footer = () => {
   return (
-    <div className="fixed bottom-0 left-0 z-[101] w-full bg-red-700 h-[10vh]">
+    <div className="fixed bottom-0 left-0 z-[101] w-full bg-[#131A17] h-[10vh]">
       <Container>
-        <div className="flex justify-between items-center">
-          <div>
+        <div className="flex justify-between items-center bg-red-500">
+          <div className="">
             <p>2022</p>
             <p>447 Sutter St 405 PMB 4 San Francisco, CA 96108</p>
           </div>
-
           <div>
             <div className="flex">
               <FaTwitter />

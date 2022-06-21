@@ -1,14 +1,7 @@
 import React from "react";
 import "react-awesome-button/dist/themes/theme-c137.css";
-import {
-  Home,
-  About,
-  MetaVision,
-  EcoSystem,
-  RoadMap,
-  OurTeam,
-  PersonalAccount,
-} from "./Pages";
+import { Home, About, MetaVision, EcoSystem, RoadMap } from "./index";
+import { OurTeam, PersonalAccount } from "./Pages";
 
 export const media = [
   {
