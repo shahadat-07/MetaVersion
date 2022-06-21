@@ -20,7 +20,7 @@ export default withNavigationContext(({ fullpage }) => {
 
   return (
     <Slider
-      startupScreen={<Startup />}
+      // startupScreen={<Startup />}
       startupDelay={275}
       animation={animation}
       className="awesome-slider"
