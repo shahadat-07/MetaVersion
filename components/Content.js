@@ -44,7 +44,7 @@ const Content = withNavigationContext(({ fullpage, main, action }) => {
         </div>
         <div className="content__action__go">{action}</div>
         <div className="content__action__github">
-          <a
+          {/* <a
             target="_blank"
             href="https://github.com/rcaferati/react-awesome-slider"
           >
@@ -56,7 +56,7 @@ const Content = withNavigationContext(({ fullpage, main, action }) => {
               />
             </svg>
             <span>Source on Github</span>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ const MetaVision = withNavigationContext(({ fullpage }) => {
         <div className="flex-2">
           <h1 className="text-white text-[40px] font-semibold font-extended mb-8">
             Welcome to NFT oasis,
-            <br /> humanity's last stronghold
+            <br /> humanity&#39s last stronghold
           </h1>
           <div className="text-white mb-6">
             <p>
