@@ -25,9 +25,11 @@ const Nav = withNavigationContext(({ fullpage }) => {
       <Container>
         <nav className="flex items-center justify-between flex-wrap h-[6vh] md:h-[10vh]">
           <div className="flex items-center flex-shrink-0 text-white mr-6">
-            <span className="font-medium text-lg md:text-2xl tracking-tight font-narrow">
-              Metavision
-            </span>
+            <Link href="/">
+              <span className="font-medium text-lg md:text-2xl tracking-tight font-narrow">
+                Metavision
+              </span>
+            </Link>
           </div>
           <div className="block lg:hidden">
             <button
