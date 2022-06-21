@@ -4,6 +4,7 @@ import PageLayout from "./PageLayout";
 import Image from "next/image";
 import heroMan from "../assets/images/hero-man.png";
 import bgLeft from "../assets/images/hero-bg-left.png";
+import bgRight from "../assets/images/hero-bg-right.png";
 import Button from "./Button";
 
 const Home = withNavigationContext(({ fullpage }) => {
@@ -22,8 +23,13 @@ const Home = withNavigationContext(({ fullpage }) => {
             </Button>
           </div>
         </div>
-        <div className="flex-1">
-          <Image src={heroMan} alt="Picture of asntronaut" />
+        <div>
+          <Image
+            src={heroMan}
+            width={300}
+            height={300}
+            alt="Picture of asntronaut"
+          />
         </div>
       </PageLayout>
     </section>
