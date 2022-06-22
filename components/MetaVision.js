@@ -7,7 +7,6 @@ import appStore from "../assets/images/appstore 1.png";
 import metaSvg from "../assets/images/META.svg";
 import Button from "./Button";
 import Link from "next/link";
-// linear-gradient(180deg, #D5030F 0%, #140A44 100%);
 const MetaVision = withNavigationContext(({ fullpage }) => {
   return (
     <section

@@ -1,0 +1,38 @@
+<svg width="41" height="28" viewBox="0 0 41 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 2.34619L13.1418 26.283H0V2.34619Z" fill="#74DE0B"/>
+<path d="M13.1412 2.81592L25.3443 17.8351H12.6719L13.1412 2.81592Z" fill="url(#paint0_linear_520_125)"/>
+<path d="M13.1426 26.2832L0.000823975 2.34644H13.1426V26.2832Z" fill="#7FFF00"/>
+<mask id="mask0_520_125" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="21" y="0" width="20" height="28">
+<rect x="26.2832" y="2.81641" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+<rect x="30.5078" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+<rect x="30.5078" y="4.22412" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+<rect x="34.7324" y="2.34668" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+<rect x="34.7324" y="6.5708" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+<rect x="35.2012" y="15.4888" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+<rect x="32.3848" y="12.2031" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+<rect x="30.5078" y="8.91748" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+<rect x="26.752" y="7.04053" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+<rect x="22.5273" y="5.63184" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+<rect x="21.5898" y="8.91748" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+<rect x="26.2832" y="11.7334" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+<rect x="28.1602" y="15.9575" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+<rect x="26.752" y="19.7129" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+<rect x="31.4473" y="19.2432" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+<rect x="34.7324" y="21.5903" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+<rect x="38.0176" y="24.8755" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+<rect x="29.0996" y="24.4058" width="2.81609" height="2.34674" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_520_125)">
+<rect x="19.7129" y="-3.28564" width="27.6916" height="35.6705" fill="url(#paint1_linear_520_125)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_520_125" x1="18.9297" y1="2.70039" x2="18.9297" y2="14.1594" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF248E"/>
+<stop offset="1" stop-color="#81FF03"/>
+</linearGradient>
+<linearGradient id="paint1_linear_520_125" x1="21.1209" y1="-3.28564" x2="47.4044" y2="32.3848" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF44B0"/>
+<stop offset="1" stop-color="#3524E7"/>
+</linearGradient>
+</defs>
+</svg>

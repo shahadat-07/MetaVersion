@@ -8,6 +8,7 @@ import { FaUserCircle } from "react-icons/fa";
 import Button from "./Button";
 import Image from "next/image";
 import userImg from "../assets/images/Vector.svg";
+import Logo from "../assets/images/Logo.svg";
 
 const Nav = withNavigationContext(({ fullpage }) => {
   const { slug } = fullpage.navigation;
@@ -24,7 +25,10 @@ const Nav = withNavigationContext(({ fullpage }) => {
     >
       <Container>
         <nav className="flex items-center justify-between flex-wrap h-[6vh] md:h-[10vh]">
-          <div className="flex items-center flex-shrink-0 text-white mr-6">
+          <div className="flex space-x-4 items-center flex-shrink-0 text-white mr-6">
+            <Link href="/">
+              <Image src={Logo} alt="Logo" />
+            </Link>
             <Link href="/">
               <span className="font-medium text-lg md:text-2xl tracking-tight font-narrow">
                 Metavision
