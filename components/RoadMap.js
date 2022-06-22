@@ -9,6 +9,7 @@ import yellowIcon from "../assets/images/YellowIcon.svg";
 import TextBox from "./TextBox";
 import RoadMapBox from "./RoadMapBox";
 import progressBar from "../assets/images/lines.png";
+import HeadingOne from "./HeadingOne";
 const RoadMap = withNavigationContext(({ fullpage }) => {
   // transform: "matrix(-1, 0, 0, 1, 0, 0)",
 
@@ -21,6 +22,7 @@ const RoadMap = withNavigationContext(({ fullpage }) => {
       className="bg-[#0B0819] w-[100vw] relative"
     >
       <PageLayout className="flex flex-col justify-center mb-4">
+        <HeadingOne className="text-center mt-3 mb-6">Roadmap</HeadingOne>
         <Image src={progressBar} alt="Progress Bar" />
         <div className="grid grid-cols-4 gap-x-8">
           <RoadMapBox>
