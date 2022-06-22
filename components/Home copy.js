@@ -10,8 +10,8 @@ import Button from "./Button";
 const Home = withNavigationContext(({ fullpage }) => {
   return (
     <section className="bg-[#0B0819] w-[100vw] relative">
-      <PageLayout className="flex items-center">
-        <div className="flex-2">
+      <PageLayout className="flex items-center bg-blue-500">
+        <div className="flex-2 bg-yellow-500">
           <h1 className="text-white text-[40px] font-semibold font-extended mb-8">
             This is New View - MetaVision. <br />
             New world. New Life. New <br /> opportunities.
@@ -23,7 +23,7 @@ const Home = withNavigationContext(({ fullpage }) => {
             </Button>
           </div>
         </div>
-        <div className="flex-1 w-full">
+        <div className="hero-right-bg">
           <Image
             src={heroMan}
             width={300}

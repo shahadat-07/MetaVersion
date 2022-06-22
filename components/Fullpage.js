@@ -23,7 +23,8 @@ export default withNavigationContext(({ fullpage }) => {
       // startupScreen={<Startup />}
       startupDelay={275}
       animation={animation}
-      className="awesome-slider"
+      // awesome-slider
+      className=""
       onTransitionEnd={() => {
         // HANDLE THE PAGE ELEMENTS ANIMATION ON FIRST TRANSITION END
         if (isFirstLoad.current === true) {

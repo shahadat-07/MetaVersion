@@ -3,7 +3,7 @@ import React from "react";
 const PageLayout = ({ children, className = "" }) => {
   return (
     <div
-      className={`container mx-auto px-10 3xl:px-0 w-[100vw] h-[88vh] md:h-[80vh] ${className}`}
+      className={`container mx-auto px-10 3xl:px-0 w-[100vw] h-[88vh] md:h-[82vh] ${className}`}
     >
       {children}
     </div>

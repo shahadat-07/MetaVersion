@@ -5,6 +5,7 @@ import Image from "next/image";
 import PageLayout from "./PageLayout";
 import stoneHole from "../assets/images/stone-hole.png";
 import HeadingOne from "./HeadingOne";
+import vision from "../assets/images/VISION.svg";
 const About = withNavigationContext(({ fullpage }) => {
   return (
     <section
@@ -13,7 +14,7 @@ const About = withNavigationContext(({ fullpage }) => {
       }}
       className="w-[100vw] relative"
     >
-      <PageLayout className="flex flex-col lg:flex-row items-center py-2 sm:py-0">
+      <PageLayout className="flex flex-col lg:flex-row items-center py-2 sm:py-0 ">
         <div className="lg:flex-1 text-center mb-3 lg:mb-0">
           <Image
             src={stoneHole}
@@ -26,7 +27,7 @@ const About = withNavigationContext(({ fullpage }) => {
           <HeadingOne className="mb-3 md:mb-4 lg:mb-8">
             Dreams come true
           </HeadingOne>
-          <p className="text-[#FBFBFB] text-sm sm:text-base mb-4 lg:mb-6">
+          <p className="text-[#FBFBFB] text-sm sm:text-base mb-4 lg:mb-6 xl:w-[75%]">
             Each person on our planet dreams of something. Metavision breaks
             patterns and makes dreams come true. Complete decentralization and
             freedom of speech, a multifunctional marketplace and a virtual world

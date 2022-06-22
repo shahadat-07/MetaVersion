@@ -2,20 +2,27 @@ import React from "react";
 import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import PageLayout from "./PageLayout";
 import Image from "next/image";
-import triCircle from "../assets/images/triCircle.png";
+import hazardIcon from "../assets/images/hazard-unscreen.gif";
 import appStore from "../assets/images/appstore 1.png";
+import metaSvg from "../assets/images/META.svg";
 import Button from "./Button";
+import Link from "next/link";
 // linear-gradient(180deg, #D5030F 0%, #140A44 100%);
 const MetaVision = withNavigationContext(({ fullpage }) => {
   return (
-    <section className="bg-[#0B0819] w-[100vw] relative">
-      <PageLayout className="flex items-center">
-        <div className="flex-2">
+    <section
+      style={{
+        background: "linear-gradient(180deg, #D5030F 0%, #140A44 100%)",
+      }}
+      className="bg-[#0B0819] w-[100vw] relative"
+    >
+      <PageLayout className="flex items-center ">
+        <div className="flex-2 ">
           <h1 className="text-white text-[40px] font-semibold font-extended mb-8">
             Welcome to NFT oasis,
-            <br /> humanity&#39s last stronghold
+            <br /> humanity&apos;s last stronghold
           </h1>
-          <div className="text-white mb-6">
+          <div className="text-white mb-6 font-narrow font-medium text-xl">
             <p>
               - Buy, sell and look for new partners in the NFT marketplace of
               the future{" "}
@@ -32,10 +39,23 @@ const MetaVision = withNavigationContext(({ fullpage }) => {
               points and real money!
             </p>
           </div>
-          <Image src={appStore} alt="Picture of asntronaut" />
+          <div>
+            <Link href="#">
+              <Image
+                src={appStore}
+                alt="Picture of App Store"
+                className="cursor-pointer"
+              />
+            </Link>
+          </div>
         </div>
         <div className="flex-1">
-          <Image src={triCircle} alt="Picture of asntronaut" />
+          <Image
+            src={hazardIcon}
+            width={723}
+            height={539}
+            alt="Picture of asntronaut"
+          />
         </div>
       </PageLayout>
     </section>
