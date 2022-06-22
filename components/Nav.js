@@ -56,20 +56,23 @@ const Nav = withNavigationContext(({ fullpage }) => {
             } w-full flex-grow lg:flex lg:items-center lg:w-auto`}
           >
             <div className="flex flex-col lg:flex-row lg:flex-grow text-white font-medium lg:space-x-4 text-[18px] font-narrow">
-              <Link className={slug === "" ? "selected" : null} href="/">
-                Home
+              <Link
+                className={slug === "socialize2earn" ? "selected" : null}
+                href="/socialize2earn"
+              >
+                Socialize2Earn
               </Link>
               <Link
-                className={slug === "about" ? "selected" : null}
-                href="/about"
+                className={slug === "market-place" ? "selected" : null}
+                href="/market-place"
               >
-                About
+                Marketplace
               </Link>
               <Link
-                className={slug === "meta-vision" ? "selected" : null}
-                href="/meta-vision"
+                className={slug === "magic-nft" ? "selected" : null}
+                href="/magic-nft"
               >
-                Metavision
+                Magic NFT
               </Link>
               <Link
                 className={slug === "eco-system" ? "selected" : null}

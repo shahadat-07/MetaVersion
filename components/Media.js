@@ -1,6 +1,13 @@
 import React from "react";
 import "react-awesome-button/dist/themes/theme-c137.css";
-import { Home, About, MetaVision, EcoSystem, RoadMap } from "./index";
+import {
+  Home,
+  MetaVision,
+  EcoSystem,
+  RoadMap,
+  Socialize2Earn,
+  MagicNFT,
+} from "./index";
 import { OurTeam, PersonalAccount } from "./Pages";
 
 export const media = [
@@ -10,37 +17,43 @@ export const media = [
     children: <Home />,
   },
   {
-    slug: "about",
+    slug: "socialize2earn",
     className: "",
-    children: <About />,
+    children: <Socialize2Earn />,
   },
   {
-    slug: "meta-vision",
-    preload: ["https://caferati.me/images/series/bojack-0.png"],
+    slug: "market-place",
+    // preload: ["https://caferati.me/images/series/bojack-0.png"],
     className: "",
     children: <MetaVision />,
   },
   {
+    slug: "magic-nft",
+    // preload: ["https://caferati.me/images/series/bojack-0.png"],
+    className: "",
+    children: <MagicNFT />,
+  },
+  {
     slug: "eco-system",
-    preload: ["https://caferati.me/images/series/bojack-0.png"],
+    // preload: ["https://caferati.me/images/series/bojack-0.png"],
     className: "",
     children: <EcoSystem />,
   },
   {
     slug: "road-map",
-    preload: ["https://caferati.me/images/series/bojack-0.png"],
+    // preload: ["https://caferati.me/images/series/bojack-0.png"],
     className: "",
     children: <RoadMap />,
   },
   {
     slug: "our-team",
-    preload: ["https://caferati.me/images/series/bojack-0.png"],
+    // preload: ["https://caferati.me/images/series/bojack-0.png"],
     className: "",
     children: <OurTeam />,
   },
   {
     slug: "personal-account",
-    preload: ["https://caferati.me/images/series/bojack-0.png"],
+    // preload: ["https://caferati.me/images/series/bojack-0.png"],
     className: "",
     children: <PersonalAccount />,
   },

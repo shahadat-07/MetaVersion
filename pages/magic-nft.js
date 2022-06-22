@@ -1,8 +1,8 @@
 import React from "react";
 import FullpageSlider from "../components/Fullpage";
 
-const about = () => {
+const MagicNft = () => {
   return <FullpageSlider />;
 };
 
-export default about;
+export default MagicNft;

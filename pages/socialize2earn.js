@@ -1,8 +1,8 @@
 import React from "react";
 import FullpageSlider from "../components/Fullpage";
 
-const MetaVision = () => {
+const Socialize2Earn = () => {
   return <FullpageSlider />;
 };
 
-export default MetaVision;
+export default Socialize2Earn;

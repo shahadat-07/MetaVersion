@@ -6,7 +6,7 @@ import PageLayout from "./PageLayout";
 import stoneHole from "../assets/images/stone-hole.png";
 import HeadingOne from "./HeadingOne";
 import vision from "../assets/images/VISION.svg";
-const About = withNavigationContext(({ fullpage }) => {
+const Socialize2Earn = withNavigationContext(({ fullpage }) => {
   return (
     <section
       style={{
@@ -47,4 +47,4 @@ const About = withNavigationContext(({ fullpage }) => {
   );
 });
 
-export default About;
+export default Socialize2Earn;

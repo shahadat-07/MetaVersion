@@ -6,12 +6,10 @@ footer {
   font-family: "Pilat Narrow";
 }
 
-/*
-.awssld__content {
-  background-color: var(--content-background-color);
-  overflow: hidden;
-  display: flex;
-  align-items: start !important;
-  justify-content: start !important;
-} 
-*/
+.awesome-slider {
+  --organic-arrow-color: #fff !important;
+}
+
+.leading {
+  line-height: 50px !important;
+}
