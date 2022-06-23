@@ -23,8 +23,8 @@ const Nav = withNavigationContext(({ fullpage }) => {
       className="fixed top-0 left-0 z-[101] w-full bg-[#131A17]"
     >
       <Container>
-        <nav className="bg-[#131A17] xl:py-4">
-          <div className="flex items-center justify-between h-16">
+        <nav className="bg-[#131A17] xl:py-3">
+          <div className="flex items-center justify-between">
             <div className="flex items-center">
               <div className="flex space-x-4 items-center flex-shrink-0 text-white mr-6">
                 <Link href="/">

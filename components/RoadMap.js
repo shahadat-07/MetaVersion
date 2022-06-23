@@ -21,7 +21,7 @@ const RoadMap = withNavigationContext(({ fullpage }) => {
       }}
       className="bg-[#0B0819] w-[100vw] relative"
     >
-      <PageLayout className="flex flex-col justify-center mb-4">
+      <PageLayout className="flex flex-col justify-center ">
         <HeadingOne className="text-center mt-3 mb-6">Roadmap</HeadingOne>
         <Image src={progressBar} alt="Progress Bar" />
         <div className="grid grid-cols-4 gap-x-8">
