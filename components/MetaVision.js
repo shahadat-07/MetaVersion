@@ -3,6 +3,7 @@ import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import PageLayout from "./PageLayout";
 import Image from "next/image";
 import hazardIcon from "../assets/images/hazard-unscreen.gif";
+import HeadingOne from "./HeadingOne";
 import appStore from "../assets/images/appstore 1.png";
 import metaSvg from "../assets/images/META.svg";
 import Button from "./Button";
@@ -15,13 +16,14 @@ const MetaVision = withNavigationContext(({ fullpage }) => {
       }}
       className="bg-[#0B0819] w-[100vw] relative"
     >
-      <PageLayout className="flex items-center ">
-        <div className="flex-2 ">
-          <h1 className="text-white text-[40px] font-semibold font-extended mb-8">
-            Welcome to NFT oasis,
+      <PageLayout className="lg:flex items-center ">
+        <div className="flex-2 order-last">
+        <HeadingOne className="mb-3 md:mb-4 lg:mb-8 lg:leading">
+        Welcome to NFT oasis,
             <br /> humanity&apos;s last stronghold
-          </h1>
-          <div className="text-white mb-6 font-narrow font-medium text-xl">
+          </HeadingOne>
+
+          <div className="text-white mb-6 font-narrow font-medium text-sm lg:text-xl">
             <p>
               - Buy, sell and look for new partners in the NFT marketplace of
               the future{" "}

@@ -68,26 +68,26 @@ const Nav = withNavigationContext(({ fullpage }) => {
                 </div>
               </div>
             </div>
-            <div className="-mr-2 flex space-x-4 xl:hidden">
+            <div className="-mr-2 flex items-center space-x-4 xl:hidden">
               <a href="#">
                 <Image
                   src={userImg}
                   alt="User Image"
-                  width={40}
-                  height={40}
+                  width={35}
+                  height={35}
                 ></Image>
               </a>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                className="bg-gray-900 inline-flex items-center justify-center px-2 md:px-4 h-8 md:h-10 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-offset-gray-800 focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
                 <span className="sr-only">Open main menu</span>
                 {!isOpen ? (
                   <svg
-                    className="block h-6 w-6"
+                    className="block h-5 md:h-6 w-5 md:w-6"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -103,7 +103,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
                   </svg>
                 ) : (
                   <svg
-                    className="block h-6 w-6"
+                    className="block h-5 md:h-6 w-5 md:w-6"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
