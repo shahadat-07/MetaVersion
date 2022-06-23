@@ -18,7 +18,7 @@ const EcoSystem = withNavigationContext(({ fullpage }) => {
       className="bg-[#0B0819] w-[100vw] relative"
     >
       <PageLayout className="flex flex-col items-center justify-center">
-        <HeadingOne className="mb-6 mt-3"> Future Ecosystem</HeadingOne>
+        <HeadingOne className="mb-4 mt-14"> Future Ecosystem</HeadingOne>
         <p className="text-white mb-8 w-[40%] text-center font-narrow">
           Virtual world exists and now after metaverse boom virtual world is
           developing very fast and time is not far away we all will start living
@@ -31,7 +31,7 @@ const EcoSystem = withNavigationContext(({ fullpage }) => {
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-          className="w-[70vw] aspect-[5/2] rounded-3xl	"
+          className="w-[50vw] aspect-[6/3] rounded-3xl	"
         ></iframe>
       </PageLayout>
     </section>
