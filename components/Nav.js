@@ -36,8 +36,8 @@ const Nav = withNavigationContext(({ fullpage }) => {
                   </span>
                 </Link>
               </div>
-              <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline shrink space-x-4 text-white font-medium text-[18px] font-narrow">
+              <div className="hidden lg:block">
+                <div className="ml-10 flex items-baseline space-x-4 text-white font-medium text-[18px] font-narrow">
                   <LinkItem
                     slug={slug}
                     slugParam="socialize2earn"
@@ -68,7 +68,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
                 </div>
               </div>
             </div>
-            <div className="-mr-2 flex space-x-4 md:hidden">
+            <div className="-mr-2 flex space-x-4 lg:hidden">
               <a href="#">
                 <Image
                   src={userImg}
@@ -120,16 +120,18 @@ const Nav = withNavigationContext(({ fullpage }) => {
                 )}
               </button>
             </div>
-            <div className="flex items-center space-x-8 hidden md:block">
-              <Button className="bg-[#553CDF]">Connect wallet</Button>
-              <a href="#">
-                <Image
-                  src={userImg}
-                  alt="User Image"
-                  width={55}
-                  height={55}
-                ></Image>
-              </a>
+            <div className="hidden lg:block">
+              <div className="flex items-center space-x-8">
+                <Button className="bg-[#553CDF]">Connect wallet</Button>
+                <a href="#">
+                  <Image
+                    src={userImg}
+                    alt="User Image"
+                    width={55}
+                    height={55}
+                  ></Image>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -143,7 +145,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
             leaveTo="opacity-0 scale-95"
           >
             {(ref) => (
-              <div className="md:hidden" id="mobile-menu">
+              <div className="lg:hidden" id="mobile-menu">
                 <div
                   ref={ref}
                   className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-white text-[18px] font-narrow"
@@ -175,7 +177,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
                     slugParam="personal-account"
                     text="Personal Account"
                   />
-                  <Button className="bg-[#553CDF] block ">
+                  <Button className="bg-[#553CDF] block sm:w-[50%]">
                     Connect wallet
                   </Button>
                 </div>
