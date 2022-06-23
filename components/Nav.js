@@ -23,7 +23,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
       className="fixed top-0 left-0 z-[101] w-full bg-[#131A17]"
     >
       <Container>
-        <nav className="bg-[#131A17] py-4">
+        <nav className="bg-[#131A17] xl:py-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex space-x-4 items-center flex-shrink-0 text-white mr-6">
@@ -36,8 +36,8 @@ const Nav = withNavigationContext(({ fullpage }) => {
                   </span>
                 </Link>
               </div>
-              <div className="hidden lg:block">
-                <div className="ml-10 flex items-baseline space-x-4 text-white font-medium text-[18px] font-narrow">
+              <div className="hidden xl:block">
+                <div className="flex text-white font-medium text-[18px] font-narrow">
                   <LinkItem
                     slug={slug}
                     slugParam="socialize2earn"
@@ -68,7 +68,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
                 </div>
               </div>
             </div>
-            <div className="-mr-2 flex space-x-4 lg:hidden">
+            <div className="-mr-2 flex space-x-4 xl:hidden">
               <a href="#">
                 <Image
                   src={userImg}
@@ -120,9 +120,10 @@ const Nav = withNavigationContext(({ fullpage }) => {
                 )}
               </button>
             </div>
-            <div className="hidden lg:block">
+            <div className="hidden xl:block">
               <div className="flex items-center space-x-8">
-                <Button className="bg-[#553CDF]">Connect wallet</Button>
+                <a href="#" className="font-extended text-sm 2xl:text-base text-center
+                 text-[#F2F2F2] py-2 2xl:py-3 px-4 2xl:px-8 rounded-[80px] bg-[#553CDF]">Connect wallet</a>
                 <a href="#">
                   <Image
                     src={userImg}
@@ -137,15 +138,15 @@ const Nav = withNavigationContext(({ fullpage }) => {
 
           <Transition
             show={isOpen}
-            enter="transition ease-out duration-100 transform"
+            enter="transition ease-in-out duration-100 transform"
             enterFrom="opacity-0 scale-95"
-            enterTo="opacity-100 scale-100"
+            enterTo="opacity-100 scale-100 duration-150"
             leave="transition ease-in duration-75 transform"
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
             {(ref) => (
-              <div className="lg:hidden" id="mobile-menu">
+              <div className="xl:hidden" id="mobile-menu">
                 <div
                   ref={ref}
                   className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-white text-[18px] font-narrow"
@@ -177,7 +178,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
                     slugParam="personal-account"
                     text="Personal Account"
                   />
-                  <Button className="bg-[#553CDF] block sm:w-[50%]">
+                  <Button className="bg-[#553CDF] block sm:w-[50%] lg:w-[25%]">
                     Connect wallet
                   </Button>
                 </div>
