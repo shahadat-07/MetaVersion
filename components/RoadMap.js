@@ -24,7 +24,7 @@ const RoadMap = withNavigationContext(({ fullpage }) => {
       <PageLayout className="flex flex-col justify-center ">
         <HeadingOne className="text-center mt-3 mb-6">Roadmap</HeadingOne>
         <Image src={progressBar} alt="Progress Bar" />
-        <div className="grid grid-cols-4 gap-x-10">
+        <div className="flex space-x-10">
           <RoadMapBox>
             <TextBox src={greenIcon} text="Develop the idea of MetaVision" />
             <TextBox
