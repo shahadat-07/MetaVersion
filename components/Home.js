@@ -17,7 +17,7 @@ const Home = withNavigationContext(({ fullpage }) => {
       height: '100%',
       backgroundRepeat: "no-repeat",
       backgroundSize: 'contain',
-      backgroundPosition: '310px 70px'
+      backgroundPosition: '280px 70px'
 }}>
     <img src="/hero-bg-left.png" alt="Bg" className="absolute w-[15%] -top-8 left-0" />
     <img src="/image 3.svg" alt="Bg" className="absolute w-[5%] top-10 left-[7%]" />
