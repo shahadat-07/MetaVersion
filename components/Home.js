@@ -23,7 +23,7 @@ const Home = withNavigationContext(({ fullpage }) => {
     <img src="/image 3.svg" alt="Bg" className="absolute w-[5%] top-10 left-[7%]" />
       <div className="flex container mx-auto px-20 3xl:px-0 w-[100vw] h-[88vh] md:h-[82vh]">
        
-        <div className="flex-1 h-full relative">
+        <div className="flex-2 h-full relative">
          <div className=" flex flex-col justify-center h-full">
          <HeadingOne className="mb-8">
             This is New View - MetaVision. <br />

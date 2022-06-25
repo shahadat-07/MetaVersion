@@ -16,7 +16,7 @@ const MagicNFT = withNavigationContext(({ fullpage }) => {
       className="w-[100vw] relative"
     >
       <PageLayout className="flex flex-col lg:flex-row items-center py-2 sm:py-0 ">
-        <div className="lg:flex-1 mb-3 lg:mb-0 px-4 ">
+        <div className="lg:flex-1 mb-3 lg:mb-0 px-4">
           <Image
             src={imageFrame}
             width={550}
@@ -26,7 +26,7 @@ const MagicNFT = withNavigationContext(({ fullpage }) => {
 
         </div>
         <div className="flex-1 px-4">
-          <HeadingOne className="mb-3 md:mb-4 lg:mb-8 lg:leading">
+          <HeadingOne className="mb-2 md:mb-2 lg:mb-8 lg:leading">
             Utility NFT Collection & <br /> Post-apocalypse <br /> Metaverse.
           </HeadingOne>
           <p className="text-[#FBFBFB] font-narrow text-base sm:text-lg mb-4 lg:mb-6">
