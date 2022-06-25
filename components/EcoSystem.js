@@ -18,7 +18,6 @@ const EcoSystem = withNavigationContext(({ fullpage }) => {
     >
      <div style={{
       backgroundImage: `url('/ECOSYSTEM.svg')`,
-
       backgroundRepeat: "no-repeat",
       backgroundSize: '100%',
       backgroundPosition: 'center 70px'

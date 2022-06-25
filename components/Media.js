@@ -7,8 +7,9 @@ import {
   RoadMap,
   Socialize2Earn,
   MagicNFT,
+  OurTeam,
+  PersonalAccount
 } from "./index";
-import { OurTeam, PersonalAccount } from "./Pages";
 
 export const media = [
   {
