@@ -16,7 +16,7 @@ const MagicNFT = withNavigationContext(({ fullpage }) => {
       className="w-[100vw] relative"
     >
       <PageLayout className="flex flex-col lg:flex-row items-center py-2 sm:py-0 ">
-        <div className="lg:flex-1 mb-3 lg:mb-0 px-4 text-center">
+        <div className="lg:flex-1 mb-3 lg:mb-0 px-4 ">
           <Image
             src={imageFrame}
             width={550}
