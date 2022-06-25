@@ -5,7 +5,6 @@ import Image from "next/image";
 import PageLayout from "./PageLayout";
 import imageFrame from "../assets/images/Frame 86.svg";
 import HeadingOne from "./HeadingOne";
-import vision from "../assets/images/VISION.svg";
 // import video from "../assets/videos/nft-video.mp4"
 const MagicNFT = withNavigationContext(({ fullpage }) => {
   return (
@@ -15,7 +14,13 @@ const MagicNFT = withNavigationContext(({ fullpage }) => {
       }}
       className="w-[100vw] relative"
     >
-      <PageLayout className="flex flex-col lg:flex-row items-center py-2 sm:py-0 ">
+     <div style={{
+      backgroundImage: `url('/NFT c.svg')`,
+      backgroundRepeat: "no-repeat",
+      backgroundSize: '60%',
+      backgroundPosition: 'right 70px'
+}}>
+     <PageLayout className="flex flex-col lg:flex-row items-center py-2 sm:py-0 ">
         <div className="lg:flex-1 mb-3 lg:mb-0 px-4">
           <Image
             src={imageFrame}
@@ -44,6 +49,7 @@ const MagicNFT = withNavigationContext(({ fullpage }) => {
           </p>
         </div>
       </PageLayout>
+       </div>
     </section>
   );
 });

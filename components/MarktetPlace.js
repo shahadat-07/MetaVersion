@@ -5,7 +5,7 @@ import Image from "next/image";
 import hazardIcon from "../assets/images/hazard-unscreen.gif";
 import HeadingOne from "./HeadingOne";
 import appStore from "../assets/images/appstore 1.png";
-import metaSvg from "../assets/images/META.svg";
+// import metaSvg from "../assets/images/META.svg";
 import Button from "./Button";
 import Link from "next/link";
 const MarketPlace = withNavigationContext(({ fullpage }) => {
@@ -16,7 +16,15 @@ const MarketPlace = withNavigationContext(({ fullpage }) => {
       }}
       className="bg-[#0B0819] w-[100vw] relative"
     >
-      <PageLayout className="lg:flex items-center ">
+     <div style={{
+      backgroundImage: `url('/META.svg')`,
+      // width: '50%',
+      // height: '50%',
+      backgroundRepeat: "no-repeat",
+      backgroundSize: '50%',
+      backgroundPosition: '0px 70px'
+}}>
+     <PageLayout className="lg:flex items-center ">
         <div className="flex-2">
         <HeadingOne className="mb-3 md:mb-4 lg:mb-8 lg:leading">
         Welcome to NFT oasis,
@@ -59,6 +67,7 @@ const MarketPlace = withNavigationContext(({ fullpage }) => {
           />
         </div>
       </PageLayout>
+     </div>
     </section>
   );
 });

@@ -16,7 +16,13 @@ const EcoSystem = withNavigationContext(({ fullpage }) => {
       }}
       className="bg-[#0B0819] w-[100vw] relative"
     >
-      <PageLayout className="flex flex-col items-center justify-center">
+     <div style={{
+      backgroundImage: `url('/ECOSYSTEM.svg')`,
+
+      backgroundRepeat: "no-repeat",
+      backgroundSize: '100%',
+      backgroundPosition: 'center 70px'
+}}> <PageLayout className="flex flex-col items-center justify-center">
         <HeadingOne className="mb-4 mt-8"> Future Ecosystem</HeadingOne>
         <p className="text-white mb-8 w-[50%] text-center font-narrow">
           Virtual world exists and now after metaverse boom virtual world is
@@ -32,7 +38,7 @@ const EcoSystem = withNavigationContext(({ fullpage }) => {
           allowFullScreen
           className="w-[50vw] aspect-[6/3] rounded-3xl	"
         ></iframe>
-      </PageLayout>
+      </PageLayout> </div>
     </section>
   );
 });

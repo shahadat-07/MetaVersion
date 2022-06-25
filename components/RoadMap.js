@@ -21,6 +21,13 @@ const RoadMap = withNavigationContext(({ fullpage }) => {
       }}
       className="bg-[#0B0819] w-[100vw] relative"
     >
+      <div  style={{
+      backgroundImage: `url('/ROADMAP.svg')`,
+
+      backgroundRepeat: "no-repeat",
+      backgroundSize: '100%',
+      backgroundPosition: 'center 70px'
+}}>
       <PageLayout className="flex flex-col justify-center ">
         <HeadingOne className="text-center mt-3 mb-6">Roadmap</HeadingOne>
         <Image src={progressBar} alt="Progress Bar" />
@@ -82,6 +89,7 @@ const RoadMap = withNavigationContext(({ fullpage }) => {
           </RoadMapBox>{" "}
         </div>
       </PageLayout>
+      </div>
     </section>
   );
 });

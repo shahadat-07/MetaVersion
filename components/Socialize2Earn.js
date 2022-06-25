@@ -5,7 +5,6 @@ import Image from "next/image";
 import PageLayout from "./PageLayout";
 import stoneHole from "../assets/images/stone-hole.png";
 import HeadingOne from "./HeadingOne";
-import vision from "../assets/images/VISION.svg";
 const Socialize2Earn = withNavigationContext(({ fullpage }) => {
   return (
     <section
@@ -14,7 +13,15 @@ const Socialize2Earn = withNavigationContext(({ fullpage }) => {
       }}
       className="w-[100vw] relative"
     >
-      <PageLayout className="flex flex-col lg:flex-row items-center py-2 sm:py-0 ">
+     <div style={{
+      backgroundImage: `url('/VISION.svg')`,
+      // width: '100%',
+      // height: '100%',
+      backgroundRepeat: "no-repeat",
+      backgroundSize: '70%',
+      backgroundPosition: 'right 70px'
+}}>
+     <PageLayout className="flex flex-col lg:flex-row items-center py-2 sm:py-0 ">
         <div className="lg:flex-1 text-center mb-3 lg:mb-0">
           <Image
             src={stoneHole}
@@ -43,6 +50,7 @@ const Socialize2Earn = withNavigationContext(({ fullpage }) => {
           </div>
         </div>
       </PageLayout>
+     </div>
     </section>
   );
 });
