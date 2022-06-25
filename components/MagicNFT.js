@@ -17,12 +17,12 @@ const MagicNFT = withNavigationContext(({ fullpage }) => {
     >
       <PageLayout className="flex flex-col lg:flex-row items-center py-2 sm:py-0 ">
         <div className="lg:flex-1 mb-3 lg:mb-0 px-4 text-center">
-          <Image
+          {/* <Image
             src={imageFrame}
             width={550}
             height={410}
             alt="Picture of Frame"
-          />
+          /> */}
 {/*          
           <video width="320" height="240" controls>
             <source src="https://youtu.be/9QWnOYDZTOc" type="video/mp4" />
