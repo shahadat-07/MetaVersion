@@ -15,19 +15,19 @@ const MagicNFT = withNavigationContext(({ fullpage }) => {
       className="w-[100vw] relative"
     >
       <PageLayout className="flex flex-col lg:flex-row items-center py-2 sm:py-0 ">
-        <div className="lg:flex-1 mb-3 lg:mb-0">
+        <div className="lg:flex-1 mb-3 lg:mb-0 px-4 text-center">
           <Image
             src={imageFrame}
-            width={630}
+            width={600}
             height={410}
             alt="Picture of Frame"
           />
         </div>
-        <div className="flex-1">
+        <div className="flex-1 px-4">
           <HeadingOne className="mb-3 md:mb-4 lg:mb-8 lg:leading">
             Utility NFT Collection & Post-apocalypse Metaverse.
           </HeadingOne>
-          <p className="text-[#FBFBFB] font-narrow text-base sm:text-lg mb-4 lg:mb-6 xl:w-[75%]">
+          <p className="text-[#FBFBFB] font-narrow text-base sm:text-lg mb-4 lg:mb-6">
             Don&apos;t you think that most of even the most famous collections
             in the NFT world are simply useless! We think that we should do only
             useful things before the apocalypse comes to us. <br /> <br />{" "}
