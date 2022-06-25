@@ -2,7 +2,7 @@ import React from "react";
 import "react-awesome-button/dist/themes/theme-c137.css";
 import {
   Home,
-  MetaVision,
+  MarketPlace,
   EcoSystem,
   RoadMap,
   Socialize2Earn,
@@ -25,7 +25,7 @@ export const media = [
     slug: "market-place",
     // preload: ["https://caferati.me/images/series/bojack-0.png"],
     className: "",
-    children: <MetaVision />,
+    children: <MarketPlace />,
   },
   {
     slug: "magic-nft",

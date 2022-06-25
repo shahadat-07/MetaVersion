@@ -3,7 +3,6 @@ import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import PageLayout from "./PageLayout";
 import Image from "next/image";
 import heroMan from "../assets/images/hero-man.png";
-import bgLeft from "../assets/images/hero-bg-left.png";
 import Button from "./Button";
 import HeadingOne from "./HeadingOne";
 

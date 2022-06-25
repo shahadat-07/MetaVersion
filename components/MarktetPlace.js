@@ -8,7 +8,7 @@ import appStore from "../assets/images/appstore 1.png";
 import metaSvg from "../assets/images/META.svg";
 import Button from "./Button";
 import Link from "next/link";
-const MetaVision = withNavigationContext(({ fullpage }) => {
+const MarketPlace = withNavigationContext(({ fullpage }) => {
   return (
     <section
       style={{
@@ -17,7 +17,7 @@ const MetaVision = withNavigationContext(({ fullpage }) => {
       className="bg-[#0B0819] w-[100vw] relative"
     >
       <PageLayout className="lg:flex items-center ">
-        <div className="flex-2 order-last">
+        <div className="flex-2">
         <HeadingOne className="mb-3 md:mb-4 lg:mb-8 lg:leading">
         Welcome to NFT oasis,
             <br /> humanity&apos;s last stronghold
@@ -63,4 +63,4 @@ const MetaVision = withNavigationContext(({ fullpage }) => {
   );
 });
 
-export default MetaVision;
+export default MarketPlace;

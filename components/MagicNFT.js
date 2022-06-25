@@ -17,25 +17,17 @@ const MagicNFT = withNavigationContext(({ fullpage }) => {
     >
       <PageLayout className="flex flex-col lg:flex-row items-center py-2 sm:py-0 ">
         <div className="lg:flex-1 mb-3 lg:mb-0 px-4 text-center">
-          {/* <Image
+          <Image
             src={imageFrame}
             width={550}
             height={410}
             alt="Picture of Frame"
-          /> */}
-{/*          
-          <video width="320" height="240" controls>
-            <source src="https://youtu.be/9QWnOYDZTOc" type="video/mp4" />
-            <source src="https://youtu.be/9QWnOYDZTOc" type="video/ogg" />
-          Your browser does not support the video .
-          </video> */}
-          
-          
-          {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/9QWnOYDZTOc" title="NFT video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> */}
+          />
+
         </div>
         <div className="flex-1 px-4">
           <HeadingOne className="mb-3 md:mb-4 lg:mb-8 lg:leading">
-            Utility NFT Collection & Post-apocalypse Metaverse.
+            Utility NFT Collection & <br /> Post-apocalypse <br /> Metaverse.
           </HeadingOne>
           <p className="text-[#FBFBFB] font-narrow text-base sm:text-lg mb-4 lg:mb-6">
             Don&apos;t you think that most of even the most famous collections

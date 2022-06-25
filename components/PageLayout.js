@@ -1,9 +1,10 @@
 import React from "react";
 
-const PageLayout = ({ children, className = "" }) => {
+const PageLayout = ({ children, className = "", style= "" }) => {
   return (
     <div
-      className={`container mx-auto px-10 3xl:px-0 w-[100vw] h-[88vh] md:h-[82vh] ${className}`}
+    style={{style}}
+      className={`container mx-auto px-28 w-[100vw] h-[88vh] md:h-[82vh] ${className}`}
     >
       {children}
     </div>

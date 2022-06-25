@@ -27,7 +27,7 @@ const Socialize2Earn = withNavigationContext(({ fullpage }) => {
           <HeadingOne className="mb-3 md:mb-4 lg:mb-8">
             Dreams come true
           </HeadingOne>
-          <p className="text-[#FBFBFB] text-sm sm:text-base mb-4 lg:mb-6 xl:w-[75%]">
+          <p className="text-[#FBFBFB] text-sm sm:text-lg font-narrow mb-4 lg:mb-6">
             Each person on our planet dreams of something. Metavision breaks
             patterns and makes dreams come true. Complete decentralization and
             freedom of speech, a multifunctional marketplace and a virtual world
