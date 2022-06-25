@@ -24,7 +24,7 @@ const RoadMap = withNavigationContext(({ fullpage }) => {
       <PageLayout className="flex flex-col justify-center ">
         <HeadingOne className="text-center mt-3 mb-6">Roadmap</HeadingOne>
         <Image src={progressBar} alt="Progress Bar" />
-        <div className="flex space-x-10">
+        <div className="flex space-x-10 justify-center">
           <RoadMapBox>
             <TextBox src={greenIcon} text="Develop the idea of MetaVision" />
             <TextBox
@@ -42,7 +42,7 @@ const RoadMap = withNavigationContext(({ fullpage }) => {
             <TextBox src={greenIcon} text="Token and Website Production" />
             <TextBox
               src={greenIcon}
-              text="Begin marketing campaign: Twitter,Telegram, Discord"
+              text="Begin marketing campaign: Telegram, Twitter,  Discord"
             />
             <TextBox src={yellowIcon} text="Social Research" />
             <TextBox src={yellowIcon} text="Press Releases" />
