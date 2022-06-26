@@ -37,7 +37,7 @@ const Home = withNavigationContext(({ fullpage }) => {
             </div>
           </div>
           <div className="flex-1">
-            <div className=" flex items-end 3xl:items-center h-full justify-center">
+            <div className="flex items-end 3xl:items-center h-full mt-8 lg:mt-0 justify-center">
               {/* <Image src={heroMan} sizes="320 640 750" alt="Picture of Stone" /> */}
 
               <Image

@@ -15,7 +15,7 @@ const Socialize2Earn = withNavigationContext(({ fullpage }) => {
     >
       <div className="socialize2earn-bg">
         <PageLayout className="flex flex-col lg:flex-row items-center py-2 sm:py-0 ">
-          <div className="lg:flex-1 text-center mb-3 lg:mb-0">
+          <div className="lg:flex-1 text-center mb-3 lg:mb-0 mt-8 lg:mt-0">
             {/* sizes="320 440 750"  */}
             <Image src={stoneHole} alt="Picture of Stone" />
             {/* <div className="h-96 3xl:h-[700px] w-[400px] 3xl:w-[700px] relative">

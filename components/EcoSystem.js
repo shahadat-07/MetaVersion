@@ -32,7 +32,7 @@ const EcoSystem = withNavigationContext(({ fullpage }) => {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="w-[50vw] lg:aspect-[6/3] rounded-3xl	"
+            className="lg:w-[50vw] lg:aspect-[6/3] rounded-3xl	"
           ></iframe>
         </PageLayout>{" "}
       </div>
