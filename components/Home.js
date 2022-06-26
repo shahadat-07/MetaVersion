@@ -33,7 +33,7 @@ const Home = withNavigationContext(({ fullpage }) => {
           <div className="flex-2 h-full relative order-2 lg:order-none">
             <div className=" flex flex-col justify-center h-full">
               <HeadingOne className="mb-8">
-                This is New View - MetaVision. <br />
+                This is New View - MetaVi. <br />
                 New world. New Life. New <br /> opportunities.
               </HeadingOne>
               <div className="flex space-x-6">

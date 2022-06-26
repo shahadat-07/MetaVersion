@@ -33,7 +33,7 @@ const MagicNFT = withNavigationContext(({ fullpage }) => {
           </div>
           <div className="flex-1 px-4">
             <HeadingOne className="mb-2 md:mb-2 lg:mb-6 lg:leading">
-              <span className="3xl:hidden"> Utility NFT Collection & <br /> Post-apocalypse <br /> Metaverse. </span>
+              <span className="3xl:hidden"> Utility NFT Collection <br />  & Post-apocalypse <br /> Metaverse. </span>
               <span className="hidden 3xl:block"> Utility NFT Collection & Post-apocalypse <br /> Metaverse. </span>
             </HeadingOne>
            <div className="text-[#FBFBFB] font-narrow text-base 2xl:text-lg 3xl:text-4xl 3xl:leading-[55px] mb-4 lg:mb-6"> 
