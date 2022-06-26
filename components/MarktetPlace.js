@@ -51,13 +51,29 @@ const MarketPlace = withNavigationContext(({ fullpage }) => {
               </Link>
             </div>
           </div>
-          <div className="lg:flex-1">
-            <Image
+          <div className="lg:flex-1 mt-12 lg:mt-0">
+            <div className="hidden lg:block">
+              <Image
+                src={hazardIcon}
+                width={723}
+                height={539}
+                alt="Picture of Stone"
+              />
+            </div>
+            <div className="h-60 sm:h-96 w-60 sm:w-96 relative lg:hidden">
+              <Image
+                src={hazardIcon}
+                alt="Picture of the nft"
+                layout="fill" // required
+              />
+            </div>
+
+            {/* <Image
               src={hazardIcon}
               width={723}
               height={539}
               alt="Picture of asntronaut"
-            />
+            /> */}
           </div>
         </PageLayout>
       </div>
