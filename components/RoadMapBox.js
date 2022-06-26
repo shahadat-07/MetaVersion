@@ -8,7 +8,7 @@ const RoadMapBox = ({ children }) => {
         background:
           "linear-gradient(200.79deg, #341235 4.28%, #370B41 21.32%, #130E30 95.17%)",
       }}
-      className="flex flex-col space-y-4 rounded-[20px] h-[400px] w-full text-white font-narrow p-8"
+      className="flex flex-col space-y-4 rounded-[20px] h-[400px] 3xl:h-auto w-full  text-white 3xl:text-4xl 3xl:leading-[55px] font-narrow p-8 3xl:p-10"
     >
       {children}
     </div>

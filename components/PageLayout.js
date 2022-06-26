@@ -4,7 +4,7 @@ const PageLayout = ({ children, className = "", style= "" }) => {
   return (
     <div
     style={{style}}
-      className={`container mx-auto px-20 w-[100vw] h-[88vh] md:h-[82vh] ${className}`}
+      className={`container mx-auto px-16 3xl:px-0 w-[100vw] h-[90vh] 3xl:max-w-[2000px] ${className}`}
     >
       {children}
     </div>

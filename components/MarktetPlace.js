@@ -16,58 +16,51 @@ const MarketPlace = withNavigationContext(({ fullpage }) => {
       }}
       className="bg-[#0B0819] w-[100vw] relative"
     >
-     <div style={{
-      backgroundImage: `url('/META.svg')`,
-      // width: '50%',
-      // height: '50%',
-      backgroundRepeat: "no-repeat",
-      backgroundSize: '50%',
-      backgroundPosition: '0px 70px'
-}}>
-     <PageLayout className="lg:flex items-center ">
-        <div className="flex-2">
-        <HeadingOne className="mb-3 md:mb-4 lg:mb-8 lg:leading">
-        Welcome to NFT oasis,
-            <br /> humanity&apos;s last stronghold
-          </HeadingOne>
+      <div className="market-place-bg">
+        <PageLayout className="lg:flex items-center ">
+          <div className="flex-2">
+            <HeadingOne className="mb-3 md:mb-4 lg:mb-8 lg:leading">
+              Welcome to NFT oasis,
+              <br /> humanity&apos;s last stronghold
+            </HeadingOne>
 
-          <div className="text-white mb-6 font-narrow font-medium text-sm lg:text-xl">
-            <p>
-              - Buy, sell and look for new partners in the NFT marketplace of
-              the future{" "}
-            </p>
-            <p>- Share your emotions and ideas in NFT format</p>
-            <p>
-              {" "}
-              - Use NFTs from our collection to become unique and increase your
-              income.
-            </p>
-            <p>
-              {" "}
-              - Play, participate in contests, show your collections, earn
-              points and real money!
-            </p>
+            <div className="text-white mb-6 3xl:mb-12 font-narrow font-medium text-sm lg:text-xl 3xl:text-4xl 3xl:leading-[55px]">
+              <p>
+                - Buy, sell and look for new partners in the NFT marketplace of
+                the future{" "}
+              </p>
+              <p>- Share your emotions and ideas in NFT format</p>
+              <p>
+                {" "}
+                - Use NFTs from our collection to become unique and increase
+                your income.
+              </p>
+              <p>
+                {" "}
+                - Play, participate in contests, show your collections, earn
+                points and real money!
+              </p>
+            </div>
+            <div>
+              <Link href="#">
+                <Image
+                  src={appStore}
+                  alt="Picture of App Store"
+                  className="cursor-pointer"
+                />
+              </Link>
+            </div>
           </div>
-          <div>
-            <Link href="#">
-              <Image
-                src={appStore}
-                alt="Picture of App Store"
-                className="cursor-pointer"
-              />
-            </Link>
+          <div className="flex-1">
+            <Image
+              src={hazardIcon}
+              width={723}
+              height={539}
+              alt="Picture of asntronaut"
+            />
           </div>
-        </div>
-        <div className="flex-1">
-          <Image
-            src={hazardIcon}
-            width={723}
-            height={539}
-            alt="Picture of asntronaut"
-          />
-        </div>
-      </PageLayout>
-     </div>
+        </PageLayout>
+      </div>
     </section>
   );
 });

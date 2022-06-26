@@ -23,7 +23,7 @@ const OurTeam = withNavigationContext(({ fullpage }) => {
        Our team
           </HeadingOne>
 
-          <div className="text-white mb-6 font-narrow font-medium text-sm lg:text-xl">
+          <div className="text-white mb-6 font-narrow font-medium text-sm lg:text-xl 3xl:text-4xl 3xl:leading-[55px]">
             <p>
               - Buy, sell and look for new partners in the NFT marketplace of
               the future{" "}
@@ -36,8 +36,8 @@ const OurTeam = withNavigationContext(({ fullpage }) => {
             </p>
           </div>
         </div>
-        <div className="flex-grow bg-red-800">
-         <h1>lor </h1>
+        <div className="flex-grow">
+         <h1>lorem </h1>
         </div>
       </PageLayout>
       </div>

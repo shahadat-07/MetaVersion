@@ -5,7 +5,7 @@ const Button = ({ children, className }) => {
   return (
     <Link href="#">
       <a
-        className={`font-extended text-sm md:text-base text-center font-medium text-[#F2F2F2] py-3 px-8 rounded-[80px] ${className}`}
+        className={`font-extended text-sm md:text-base 3xl:text-4xl text-center font-medium text-[#F2F2F2] py-3 3xl:py-10 px-8 3xl:px-28 rounded-[80px] ${className}`}
       >
         {children}
       </a>

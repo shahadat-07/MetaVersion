@@ -13,3 +13,10 @@ footer {
 .leading {
   line-height: 100px !important;
 }
+
+.market-place-bg{
+    background-image: url('/META.svg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 0px 70px
+}

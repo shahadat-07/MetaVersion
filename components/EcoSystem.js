@@ -23,7 +23,7 @@ const EcoSystem = withNavigationContext(({ fullpage }) => {
       backgroundPosition: 'center 70px'
 }}> <PageLayout className="flex flex-col items-center justify-center">
         <HeadingOne className="mb-4 mt-8"> Future Ecosystem</HeadingOne>
-        <p className="text-white mb-8 w-[50%] text-center font-narrow">
+        <p className="text-white mb-8 w-[50%] text-center font-narrow 3xl:text-4xl 3xl:leading-[55px]">
           Virtual world exists and now after metaverse boom virtual world is
           developing very fast and time is not far away we all will start living
           in virtual world” ― Anuj Jasani

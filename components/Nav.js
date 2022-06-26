@@ -23,7 +23,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
       className="fixed top-0 left-0 z-[101] w-full bg-[#131A17]"
     >
       <Container>
-        <nav className="bg-[#131A17] xl:py-3">
+        <nav className="bg-[#131A17] xl:py-3 3xl:py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <div className="flex space-x-4 items-center flex-shrink-0 text-white mr-6">
@@ -31,13 +31,13 @@ const Nav = withNavigationContext(({ fullpage }) => {
                   <Image src={Logo} alt="Logo" />
                 </Link>
                 <Link href="/">
-                  <span className="font-medium text-lg md:text-2xl tracking-tight font-narrow">
+                  <span className="font-medium text-lg md:text-2xl 3xl:text-4xl tracking-tight font-narrow">
                     Metavision
                   </span>
                 </Link>
               </div>
               <div className="hidden xl:block">
-                <div className="flex text-white font-medium text-[18px] font-narrow">
+                <div className="flex text-white font-medium text-[18px] 3xl:text-3xl font-narrow">
                   <LinkItem
                     slug={slug}
                     slugParam="socialize2earn"
@@ -123,7 +123,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
             <div className="hidden xl:block">
               <div className="flex items-center space-x-8">
                 <a href="#" className="font-extended text-sm 2xl:text-base text-center
-                 text-[#F2F2F2] py-2 2xl:py-3 px-4 2xl:px-8 rounded-[80px] bg-[#553CDF]">Connect wallet</a>
+                 text-[#F2F2F2] py-2 2xl:py-3 px-4 2xl:px-8 3xl:text-lg rounded-[80px] bg-[#553CDF]">Connect wallet</a>
                 <a href="#">
                   <Image
                     src={userImg}
