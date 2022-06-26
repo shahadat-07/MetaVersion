@@ -19,7 +19,7 @@ const RoadMap = withNavigationContext(({ fullpage }) => {
         background:
           "linear-gradient(180deg, #00C2FF 0%, #360E3D 0.01%, #140E31 100%)",
       }}
-      className="bg-[#0B0819] w-[100vw] relative overflow-scroll"
+      className="bg-[#0B0819] w-screen relative overflow-y-scroll xl:overflow-hidden"
     >
       <div  className="road-map-bg">
       <PageLayout className="flex flex-col lg:justify-center">
