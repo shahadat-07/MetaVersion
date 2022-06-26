@@ -60,11 +60,11 @@ const Nav = withNavigationContext(({ fullpage }) => {
                   />
                   <LinkItem slug={slug} slugParam="road-map" text="Roadmap" />
                   <LinkItem slug={slug} slugParam="our-team" text="Our Team" />
-                  <LinkItem
+                  {/* <LinkItem
                     slug={slug}
                     slugParam="personal-account"
                     text="Personal Account"
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
@@ -173,11 +173,11 @@ const Nav = withNavigationContext(({ fullpage }) => {
                   />
                   <LinkItem slug={slug} slugParam="road-map" text="Roadmap" />
                   <LinkItem slug={slug} slugParam="our-team" text="Our Team" />
-                  <LinkItem
+                  {/* <LinkItem
                     slug={slug}
                     slugParam="personal-account"
                     text="Personal Account"
-                  />
+                  /> */}
                   <Button className="bg-[#553CDF] block sm:w-[50%] lg:w-[25%]">
                     Connect wallet
                   </Button>

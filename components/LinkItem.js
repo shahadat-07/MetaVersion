@@ -8,7 +8,7 @@ const LinkItem = ({ slug, slugParam, text, className = "" }) => {
       href={`/${slugParam}`}
     >
       <span
-        className={`text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md font-medium ${className}`}
+        className={`text-gray-300 focus:bg-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md font-medium ${className}`}
       >
         {text}
       </span>
