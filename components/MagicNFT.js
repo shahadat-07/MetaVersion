@@ -16,7 +16,7 @@ const MagicNFT = withNavigationContext(({ fullpage }) => {
     >
       <div className="magic-nft-bg">
         <PageLayout className="flex flex-col lg:flex-row items-center py-2 sm:py-0 ">
-          <div className="lg:flex-1 mt-12 lg:mt-0 px-4">
+          <div className="lg:flex-1 mt-12 lg:mt-0 px-5">
             <div className="hidden lg:block">
               <Image src={imageFrame} alt="Picture of Stone" />
             </div>
@@ -28,7 +28,7 @@ const MagicNFT = withNavigationContext(({ fullpage }) => {
               />
             </div>
           </div>
-          <div className="flex-1 px-4">
+          <div className="flex-1 px-5">
             <HeadingOne className="text-center lg:text-start mb-2 md:mb-2 lg:mb-6 lg:leading">
               <span className="lg:hidden">
                 {" "}

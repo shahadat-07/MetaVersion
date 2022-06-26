@@ -20,8 +20,10 @@ const MarketPlace = withNavigationContext(({ fullpage }) => {
         <PageLayout className="flex flex-col lg:flex-row items-center ">
           <div className="flex-1 lg:flex-2 order-2 lg:order-none">
             <HeadingOne className="mb-3 md:mb-4 lg:mb-8 lg:leading">
-              Welcome to NFT oasis,
-              <br /> humanity&apos;s last stronghold
+             <span className="3xl:hidden">  Welcome to NFT oasis,
+              <br /> humanity&apos;s last stronghold </span>
+             <span className="hidden 3xl:block">  Welcome to NFT oasis,
+               humanity &apos;s last stronghold </span>
             </HeadingOne>
 
             <div className="text-white mb-6 3xl:mb-12 font-narrow font-medium text-sm lg:text-xl 3xl:text-4xl 3xl:leading-[55px]">
@@ -52,7 +54,7 @@ const MarketPlace = withNavigationContext(({ fullpage }) => {
             </div>
           </div>
           <div className="lg:flex-1 mt-12 lg:mt-0">
-            <div className="hidden lg:block">
+            <div className="hidden lg:block 3xl:hidden">
               <Image
                 src={hazardIcon}
                 width={723}
@@ -60,7 +62,7 @@ const MarketPlace = withNavigationContext(({ fullpage }) => {
                 alt="Picture of Stone"
               />
             </div>
-            <div className="h-60 sm:h-96 w-60 sm:w-96 relative lg:hidden">
+            <div className="h-60 sm:h-96 w-60 sm:w-96 relative lg:hidden 3xl:block 3xl:w-[800px] 3xl:h-[800px]">
               <Image
                 src={hazardIcon}
                 alt="Picture of the nft"
