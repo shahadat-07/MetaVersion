@@ -17,8 +17,8 @@ const MarketPlace = withNavigationContext(({ fullpage }) => {
       className="bg-[#0B0819] w-[100vw] relative"
     >
       <div className="market-place-bg">
-        <PageLayout className="lg:flex items-center ">
-          <div className="flex-2">
+        <PageLayout className="flex flex-col lg:flex-row items-center ">
+          <div className="flex-1 lg:flex-2 order-2 lg:order-none">
             <HeadingOne className="mb-3 md:mb-4 lg:mb-8 lg:leading">
               Welcome to NFT oasis,
               <br /> humanity&apos;s last stronghold
@@ -51,7 +51,7 @@ const MarketPlace = withNavigationContext(({ fullpage }) => {
               </Link>
             </div>
           </div>
-          <div className="flex-1">
+          <div className="lg:flex-1">
             <Image
               src={hazardIcon}
               width={723}

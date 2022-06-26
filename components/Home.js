@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import PageLayout from "./PageLayout";
@@ -8,17 +9,8 @@ import HeadingOne from "./HeadingOne";
 
 const Home = withNavigationContext(({ fullpage }) => {
   return (
-    <section className="bg-[#0B0819] w-[100vw] h-[90vh] relative">
-      <div
-        style={{
-          backgroundImage: `url('/hero-bg-right.png')`,
-          width: "100%",
-          height: "100%",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "contain",
-          backgroundPosition: "280px 70px",
-        }}
-      >
+    <section className="bg-[#0B0819] w-[100vw] h-[95vh] relative">
+      <div className="home-bg">
         <img
           src="/hero-bg-left.png"
           alt="Bg"
@@ -31,12 +23,12 @@ const Home = withNavigationContext(({ fullpage }) => {
         />
         <PageLayout className="flex flex-col lg:flex-row">
           <div className="flex-2 h-full relative order-2 lg:order-none">
-            <div className=" flex flex-col justify-center h-full">
-              <HeadingOne className="mb-8">
-                This is New View - MetaVi. <br />
+            <div className="flex flex-col lg:justify-center h-full">
+              <HeadingOne className="mb-4 lg:mb-8">
+                This is New View - MetaVision. <br />
                 New world. New Life. New <br /> opportunities.
               </HeadingOne>
-              <div className="flex space-x-6">
+              <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6">
                 <Button className="bg-[#553CDF] ">Join presale</Button>
                 <Button className="border-2 border-[#553CDF] hover:bg-[#553CDF] transition">
                   MetaVision

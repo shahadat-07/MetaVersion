@@ -14,9 +14,54 @@ footer {
   line-height: 100px !important;
 }
 
+.home-bg{
+  background-image: url('/hero-bg-right.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position:280px 70px ;
+}
+
+.socialize2earn-bg{
+  background-image: url('/VISION.svg');
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: right 70px
+}
+
 .market-place-bg{
     background-image: url('/META.svg');
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: 0px 70px
 }
+
+.magic-nft-bg{
+    background-image: url('/NFT c.svg');
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: right 70px
+}
+
+.our-team-bg{
+    background-image: url('/OUR TEAM.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 70px;
+}
+
+.eco-system-bg{
+    background-image: url('/ECOSYSTEM.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 70px;
+}
+
+.road-map-bg{
+    background-image: url('/ROADMAP.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 70px;
+}
+

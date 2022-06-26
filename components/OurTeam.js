@@ -3,7 +3,6 @@ import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import HeadingOne from "./HeadingOne";
 import PageLayout from "./PageLayout";
 const OurTeam = withNavigationContext(({ fullpage }) => {
-
   return (
     <section
       style={{
@@ -11,35 +10,29 @@ const OurTeam = withNavigationContext(({ fullpage }) => {
       }}
       className="bg-[#0B0819] w-[100vw] relative"
     >
-      <div  style={{
-      backgroundImage: `url('/OUR TEAM.svg')`,
-      backgroundRepeat: "no-repeat",
-      backgroundSize: '100%',
-      backgroundPosition: 'center 70px'
-}}>
-       <PageLayout className="flex items-center ">
-        <div className="flex-0">
-        <HeadingOne className="mb-3 md:mb-4 lg:mb-8 lg:leading">
-       Our team
-          </HeadingOne>
-
-          <div className="text-white mb-6 font-narrow font-medium text-sm lg:text-xl 3xl:text-4xl 3xl:leading-[55px]">
-            <p>
-              - Buy, sell and look for new partners in the NFT marketplace of
-              the future{" "}
-            </p>
-            <p>- Share your emotions and ideas in NFT format</p>
-            <p>
-              {" "}
-              - Use NFTs from our collection to become unique and increase your
-              income.
-            </p>
+      <div className="our-team-bg">
+        <PageLayout className="flex items-center ">
+          <div className="flex-0">
+            <HeadingOne className="mb-3 md:mb-4 lg:mb-8 lg:leading">
+              Our team
+            </HeadingOne>
+            <div className="text-white mb-6 font-narrow font-medium text-sm lg:text-xl 3xl:text-4xl 3xl:leading-[55px]">
+              <p>
+                - Buy, sell and look for new partners in the NFT marketplace of
+                the future{" "}
+              </p>
+              <p>- Share your emotions and ideas in NFT format</p>
+              <p>
+                {" "}
+                - Use NFTs from our collection to become unique and increase
+                your income.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="flex-grow">
-         <h1>lorem </h1>
-        </div>
-      </PageLayout>
+          <div className="flex-grow">
+            <h1>lorem </h1>
+          </div>
+        </PageLayout>
       </div>
     </section>
   );

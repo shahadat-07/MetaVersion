@@ -19,19 +19,13 @@ const RoadMap = withNavigationContext(({ fullpage }) => {
         background:
           "linear-gradient(180deg, #00C2FF 0%, #360E3D 0.01%, #140E31 100%)",
       }}
-      className="bg-[#0B0819] w-[100vw] relative"
+      className="bg-[#0B0819] w-[100vw] relative overflow-scroll"
     >
-      <div  style={{
-      backgroundImage: `url('/ROADMAP.svg')`,
-
-      backgroundRepeat: "no-repeat",
-      backgroundSize: '100%',
-      backgroundPosition: 'center 70px'
-}}>
-      <PageLayout className="flex flex-col justify-center ">
-        <HeadingOne className="text-center mt-3 mb-6">Roadmap</HeadingOne>
+      <div  className="road-map-bg">
+      <PageLayout className="flex flex-col lg:justify-center">
+        <HeadingOne className="text-center mt-12 lg:mt-3 mb-6">Roadmap</HeadingOne>
         <Image src={progressBar} alt="Progress Bar" />
-        <div className="flex space-x-8 3xl:space-x-12 justify-center">
+        <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-8 3xl:space-x-12 justify-center pb-20">
           <RoadMapBox>
             <TextBox src={greenIcon} text="Develop the idea of MetaVision" />
             <TextBox

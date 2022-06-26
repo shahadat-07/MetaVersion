@@ -13,15 +13,7 @@ const Socialize2Earn = withNavigationContext(({ fullpage }) => {
       }}
       className="w-[100vw] relative"
     >
-      <div
-        style={{
-          backgroundImage: `url('/VISION.svg')`,
-
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "70%",
-          backgroundPosition: "right 70px",
-        }}
-      >
+      <div className="socialize2earn-bg">
         <PageLayout className="flex flex-col lg:flex-row items-center py-2 sm:py-0 ">
           <div className="lg:flex-1 text-center mb-3 lg:mb-0">
             {/* sizes="320 440 750"  */}

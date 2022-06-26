@@ -16,28 +16,26 @@ const EcoSystem = withNavigationContext(({ fullpage }) => {
       }}
       className="bg-[#0B0819] w-[100vw] relative"
     >
-     <div style={{
-      backgroundImage: `url('/ECOSYSTEM.svg')`,
-      backgroundRepeat: "no-repeat",
-      backgroundSize: '100%',
-      backgroundPosition: 'center 70px'
-}}> <PageLayout className="flex flex-col items-center justify-center">
-        <HeadingOne className="mb-4 mt-8"> Future Ecosystem</HeadingOne>
-        <p className="text-white mb-8 w-[50%] text-center font-narrow 3xl:text-4xl 3xl:leading-[55px]">
-          Virtual world exists and now after metaverse boom virtual world is
-          developing very fast and time is not far away we all will start living
-          in virtual world” ― Anuj Jasani
-        </p>
+      <div className="eco-system-bg">
+        {" "}
+        <PageLayout className="flex flex-col items-center justify-center">
+          <HeadingOne className="mb-4 mt-8"> Future Ecosystem</HeadingOne>
+          <p className="text-white mb-8 lg:w-[50%] text-center font-narrow 3xl:text-4xl 3xl:leading-[55px]">
+            Virtual world exists and now after metaverse boom virtual world is
+            developing very fast and time is not far away we all will start
+            living in virtual world” ― Anuj Jasani
+          </p>
 
-        <iframe
-          src="https://www.youtube.com/embed/FEokzFMbeq0"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          className="w-[50vw] aspect-[6/3] rounded-3xl	"
-        ></iframe>
-      </PageLayout> </div>
+          <iframe
+            src="https://www.youtube.com/embed/FEokzFMbeq0"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-[50vw] lg:aspect-[6/3] rounded-3xl	"
+          ></iframe>
+        </PageLayout>{" "}
+      </div>
     </section>
   );
 });
