@@ -45,7 +45,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
                 onClick={() => setTimeout(setIsOpen(false), 1500)}
                 className=""
               >
-                <div className="h-10 md:h-14 w-10 md:w-14 relative xl:hidden">
+                <div className="h-8 md:h-14 w-10 md:w-14 relative xl:hidden">
                   <Image
                     src={wallet}
                     alt="Picture of wallet"
@@ -62,7 +62,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute right-0 z-10 w-[300px] h-[400]  md:w-[400px] md:h-[500px]">
+                <Popover.Panel className="absolute right-0 z-10 w-[300px] h-[400] md:w-[400px] md:h-[500px]">
                   <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5">
                     <div className="relative bg-[#553CDF] rounded-md">
                       <form className="rounded px-8 pt-6 pb-8 mb-4 text-white">
@@ -182,7 +182,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
               </div>
             </div>
             <div className="-mr-2 flex items-center space-x-4 xl:hidden">
-              <div className="h-10 md:h-14 w-10 md:w-14 relative xl:hidden">
+              <div className="h-8 md:h-14 w-10 md:w-14 relative xl:hidden">
                 <Image
                   src={userImg}
                   alt="Picture of user"
