@@ -122,8 +122,13 @@ const Nav = withNavigationContext(({ fullpage }) => {
             </div>
             <div className="hidden xl:block">
               <div className="flex items-center space-x-8">
-                <a href="#" className="font-extended text-sm 2xl:text-base text-center
-                 text-[#F2F2F2] py-2 2xl:py-3 px-4 2xl:px-8 3xl:text-lg rounded-[80px] bg-[#553CDF]">Connect wallet</a>
+                <a
+                  href="#"
+                  className="font-extended text-sm 2xl:text-base text-center
+                 text-[#F2F2F2] py-2 2xl:py-3 px-4 2xl:px-8 3xl:text-lg rounded-[80px] bg-[#553CDF]"
+                >
+                  Connect wallet
+                </a>
                 <a href="#">
                   <Image
                     src={userImg}
@@ -149,30 +154,44 @@ const Nav = withNavigationContext(({ fullpage }) => {
               <div className="xl:hidden" id="mobile-menu">
                 <div
                   ref={ref}
-                  className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-white text-[18px] font-narrow"
+                  className="link px-2 pt-2 pb-3 space-y-1 sm:px-3 text-white text-[18px] font-narrow "
                 >
                   <LinkItem
                     slug={slug}
                     slugParam="socialize2earn"
                     text="Socialize2Earn"
+                    className="hover:bg-gray-700"
                   />
                   <LinkItem
                     slug={slug}
                     slugParam="market-place"
                     text="Marketplace"
+                    className="hover:bg-gray-700"
                   />
                   <LinkItem
                     slug={slug}
                     slugParam="magic-nft"
                     text="Magic NFT"
+                    className="hover:bg-gray-700"
                   />
                   <LinkItem
                     slug={slug}
                     slugParam="eco-system"
                     text="Ecosystem"
+                    className="hover:bg-gray-700"
                   />
-                  <LinkItem slug={slug} slugParam="road-map" text="Roadmap" />
-                  <LinkItem slug={slug} slugParam="our-team" text="Our Team" />
+                  <LinkItem
+                    slug={slug}
+                    slugParam="road-map"
+                    text="Roadmap"
+                    className="hover:bg-gray-700"
+                  />
+                  <LinkItem
+                    slug={slug}
+                    slugParam="our-team"
+                    text="Our Team"
+                    className="hover:bg-gray-700"
+                  />
                   {/* <LinkItem
                     slug={slug}
                     slugParam="personal-account"
