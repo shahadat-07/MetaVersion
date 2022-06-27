@@ -43,10 +43,15 @@ const Nav = withNavigationContext(({ fullpage }) => {
             <>
               <Popover.Button
                 onClick={() => setTimeout(setIsOpen(false), 1500)}
-                className="font-extended text-sm 2xl:text-base text-center
-                text-[#F2F2F2] py-2 2xl:py-3 px-4 2xl:px-8 3xl:text-lg rounded-[80px] bg-[#553CDF]"
+                className=""
               >
-                <span className="">Connect Wallet</span>
+                <div className="h-10 md:h-14 w-10 md:w-14 relative xl:hidden">
+                  <Image
+                    src={wallet}
+                    alt="Picture of wallet"
+                    layout="fill" // required
+                  />
+                </div>
               </Popover.Button>
               <Transition
                 as={Fragment}
@@ -57,7 +62,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute right-0 z-10 lg:w-[400px] lg:h-[500px]">
+                <Popover.Panel className="absolute right-0 z-10 w-[300px] h-[400]  md:w-[400px] md:h-[500px]">
                   <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5">
                     <div className="relative bg-[#553CDF] rounded-md">
                       <form className="rounded px-8 pt-6 pb-8 mb-4 text-white">
@@ -185,13 +190,6 @@ const Nav = withNavigationContext(({ fullpage }) => {
                 />
               </div>
               <ConnectWallet />
-              {/* <div className="h-10 md:h-14 w-10 md:w-14 relative xl:hidden">
-                <Image
-                  src={wallet}
-                  alt="Picture of wallet"
-                  layout="fill" // required
-                />
-              </div> */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
