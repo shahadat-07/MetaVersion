@@ -12,7 +12,7 @@ const OurTeam = withNavigationContext(({ fullpage }) => {
     >
       <div className="our-team-bg">
         <PageLayout className="flex items-center ">
-          <div className="flex-0">
+          <div className="flex-1">
             <HeadingOne className="mb-3 md:mb-4 lg:mb-8 lg:leading">
               Our team
             </HeadingOne>
@@ -29,7 +29,7 @@ const OurTeam = withNavigationContext(({ fullpage }) => {
               </p>
             </div>
           </div>
-          <div className="flex-grow">
+          <div className="flex-3">
             <h1>lorem </h1>
           </div>
         </PageLayout>

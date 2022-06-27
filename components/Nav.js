@@ -12,6 +12,7 @@ import Image from "next/image";
 import userImg from "../assets/images/Vector.svg";
 import Logo from "../assets/images/Logo.svg";
 import LinkItem from "./LinkItem";
+import ConnectWallet from "./ConnectWallet";
 
 const Nav = withNavigationContext(({ fullpage }) => {
   const { slug } = fullpage.navigation;
@@ -121,14 +122,17 @@ const Nav = withNavigationContext(({ fullpage }) => {
               </button>
             </div>
             <div className="hidden xl:block">
-              <div className="flex items-center space-x-8">
-                <a
+              <div className="flex items-center">
+              <div>
+                  <ConnectWallet />
+              </div>
+                {/* <a
                   href="#"
                   className="font-extended text-sm 2xl:text-base text-center
                  text-[#F2F2F2] py-2 2xl:py-3 px-4 2xl:px-8 3xl:text-lg rounded-[80px] bg-[#553CDF]"
                 >
                   Connect wallet
-                </a>
+                </a> */}
                 <a href="#">
                   <Image
                     src={userImg}
@@ -197,9 +201,10 @@ const Nav = withNavigationContext(({ fullpage }) => {
                     slugParam="personal-account"
                     text="Personal Account"
                   /> */}
-                  <Button className="bg-[#553CDF] block sm:w-[50%] lg:w-[25%]">
+                  <ConnectWallet />
+                  {/* <Button className="bg-[#553CDF] block sm:w-[50%] lg:w-[25%]">
                     Connect wallet
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             )}
