@@ -1,22 +1,129 @@
 import React, { useState } from "react";
+import { Popover, Transition } from "@headlessui/react";
+import { Fragment } from "react";
+import Button from "./Button";
 import {
   withNavigationContext,
   Link,
 } from "react-awesome-slider/dist/navigation";
-import { Transition } from "@headlessui/react";
-
 import Container from "./Container";
-import { FaUserCircle } from "react-icons/fa";
-import Button from "./Button";
 import Image from "next/image";
 import userImg from "../assets/images/Vector.svg";
+import wallet from "../assets/images/wallet-svgrepo-com.svg";
 import Logo from "../assets/images/Logo.svg";
-import LinkItem from "./LinkItem";
-import ConnectWallet from "./ConnectWallet";
 
 const Nav = withNavigationContext(({ fullpage }) => {
   const { slug } = fullpage.navigation;
   const [isOpen, setIsOpen] = useState(false);
+  console.log(isOpen);
+
+  const LinkItem = ({ slug, slugParam, text, className = "" }) => {
+    return (
+      <Link
+        onClick={() => setTimeout(setIsOpen(false), 50000)}
+        className={`${
+          slug === slugParam ? "selected bg-gray-700 rounded-md" : null
+        }`}
+        href={`/${slugParam}`}
+      >
+        <span
+          className={`text-white hover:bg-gray-800 rounded-md block px-3 py-2 font-medium ${className}`}
+        >
+          {text}
+        </span>
+      </Link>
+    );
+  };
+
+  function ConnectWallet() {
+    return (
+      <div className="xl:px-4">
+        <Popover className="relative">
+          {({ open }) => (
+            <>
+              <Popover.Button
+                onClick={() => setTimeout(setIsOpen(false), 1500)}
+                className="font-extended text-sm 2xl:text-base text-center
+                text-[#F2F2F2] py-2 2xl:py-3 px-4 2xl:px-8 3xl:text-lg rounded-[80px] bg-[#553CDF]"
+              >
+                <span className="">Connect Wallet</span>
+              </Popover.Button>
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-200"
+                enterFrom="opacity-0 translate-y-1"
+                enterTo="opacity-100 translate-y-0"
+                leave="transition ease-in duration-150"
+                leaveFrom="opacity-100 translate-y-0"
+                leaveTo="opacity-0 translate-y-1"
+              >
+                <Popover.Panel className="absolute right-0 z-10 lg:w-[400px] lg:h-[500px]">
+                  <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5">
+                    <div className="relative bg-[#553CDF] rounded-md">
+                      <form className="rounded px-8 pt-6 pb-8 mb-4 text-white">
+                        <p className="mb-4 text-center font-narrow font-semibold">
+                          First time here ? Please register.
+                        </p>
+
+                        <div className="mb-2">
+                          <label
+                            className="block text-sm font-medium mb-2 font-extended text-white"
+                            htmlFor="telegram"
+                          >
+                            Telegram
+                          </label>
+                          <input
+                            className="shadow appearance-none border bg-gray-200 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                            id="text"
+                            type="text"
+                            placeholder=""
+                          />
+                        </div>
+                        <div className="mb-2">
+                          <label
+                            className="block text-sm font-medium mb-2 font-extended text-white"
+                            htmlFor="email"
+                          >
+                            E-mail
+                          </label>
+                          <input
+                            className="shadow appearance-none border bg-gray-200 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                            id="email"
+                            type="email"
+                            placeholder=""
+                          />
+                        </div>
+                        <div className="mb-2">
+                          <label
+                            className="block  text-sm font-medium mb-2 font-extended text-white"
+                            htmlFor="text"
+                          >
+                            Metaverse
+                          </label>
+                          <input
+                            className="shadow appearance-none border bg-gray-200 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                            id="text"
+                            type="text"
+                            placeholder=""
+                          />
+                        </div>
+                        <div className="text-center">
+                          <button className="bg-[#553CDF] shadow-xl font-extended text-sm md:text-base text-center font-medium text-[#F2F2F2] py-3 px-8 rounded-[80px]">
+                            {" "}
+                            Register{" "}
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </Popover.Panel>
+              </Transition>
+            </>
+          )}
+        </Popover>
+      </div>
+    );
+  }
 
   return (
     <header
@@ -24,7 +131,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
       className="fixed top-0 left-0 z-[101] w-full bg-[#131A17]"
     >
       <Container>
-        <nav className="bg-[#131A17] py-2 xl:py-3 3xl:py-6">
+        <nav className="bg-[#131A17] py-3 3xl:py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <div className="flex space-x-4 items-center flex-shrink-0 text-white mr-6">
@@ -70,18 +177,25 @@ const Nav = withNavigationContext(({ fullpage }) => {
               </div>
             </div>
             <div className="-mr-2 flex items-center space-x-4 xl:hidden">
-              <a href="#">
+              <div className="h-10 md:h-14 w-10 md:w-14 relative xl:hidden">
                 <Image
                   src={userImg}
-                  alt="User Image"
-                  width={35}
-                  height={35}
-                ></Image>
-              </a>
+                  alt="Picture of user"
+                  layout="fill" // required
+                />
+              </div>
+              <ConnectWallet />
+              {/* <div className="h-10 md:h-14 w-10 md:w-14 relative xl:hidden">
+                <Image
+                  src={wallet}
+                  alt="Picture of wallet"
+                  layout="fill" // required
+                />
+              </div> */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-gray-900 inline-flex items-center justify-center px-2 md:px-4 h-8 md:h-10 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-offset-gray-800 focus:ring-white"
+                className="bg-gray-900 inline-flex items-center justify-center px-2 md:px-4 h-10 md:h-14 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-offset-gray-800 focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
@@ -123,16 +237,10 @@ const Nav = withNavigationContext(({ fullpage }) => {
             </div>
             <div className="hidden xl:block">
               <div className="flex items-center">
-              <div>
+                <div>
                   <ConnectWallet />
-              </div>
-                {/* <a
-                  href="#"
-                  className="font-extended text-sm 2xl:text-base text-center
-                 text-[#F2F2F2] py-2 2xl:py-3 px-4 2xl:px-8 3xl:text-lg rounded-[80px] bg-[#553CDF]"
-                >
-                  Connect wallet
-                </a> */}
+                </div>
+
                 <a href="#">
                   <Image
                     src={userImg}
@@ -201,10 +309,14 @@ const Nav = withNavigationContext(({ fullpage }) => {
                     slugParam="personal-account"
                     text="Personal Account"
                   /> */}
-                  <ConnectWallet />
-                  {/* <Button className="bg-[#553CDF] block sm:w-[50%] lg:w-[25%]">
-                    Connect wallet
-                  </Button> */}
+                  {/* <Link to="/register">
+                    <Button className="bg-[#553CDF] block sm:w-[50%] lg:w-[25%] mt-2">
+                      Connect wallet
+                    </Button>
+                  </Link> */}
+                  {/* <ConnectWallet
+                    onClick={() => setTimeout(setIsOpen(false), 1000)}
+                  /> */}
                 </div>
               </div>
             )}

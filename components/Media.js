@@ -8,7 +8,8 @@ import {
   Socialize2Earn,
   MagicNFT,
   OurTeam,
-  PersonalAccount
+  PersonalAccount,
+  Register
 } from "./index";
 
 export const media = [
@@ -24,38 +25,37 @@ export const media = [
   },
   {
     slug: "market-place",
-    // preload: ["https://caferati.me/images/series/bojack-0.png"],
     className: "",
     children: <MarketPlace />,
   },
   {
     slug: "magic-nft",
-    // preload: ["https://caferati.me/images/series/bojack-0.png"],
     className: "",
     children: <MagicNFT />,
   },
   {
     slug: "eco-system",
-    // preload: ["https://caferati.me/images/series/bojack-0.png"],
     className: "",
     children: <EcoSystem />,
   },
   {
     slug: "road-map",
-    // preload: ["https://caferati.me/images/series/bojack-0.png"],
     className: "",
     children: <RoadMap />,
   },
   {
     slug: "our-team",
-    // preload: ["https://caferati.me/images/series/bojack-0.png"],
     className: "",
     children: <OurTeam />,
   },
-  {
-    slug: "personal-account",
-    // preload: ["https://caferati.me/images/series/bojack-0.png"],
-    className: "",
-    children: <PersonalAccount />,
-  },
+  // {
+  //   slug: "personal-account",
+  //   className: "",
+  //   children: <PersonalAccount />,
+  // },
+  // {
+  //   slug: "register",
+  //   className: "xl:hidden",
+  //   children: <Register />,
+  // },
 ];

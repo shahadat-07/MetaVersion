@@ -6,4 +6,5 @@ import MagicNFT from "./MagicNFT";
 import Socialize2Earn from "./Socialize2Earn";
 import OurTeam from "./OurTeam";
 import PersonalAccount from "./PersonalAccount";
-export { Home, MarketPlace, EcoSystem, RoadMap, MagicNFT, Socialize2Earn, OurTeam, PersonalAccount };
+import Register from "./Register";
+export { Home, MarketPlace, EcoSystem, RoadMap, MagicNFT, Socialize2Earn, OurTeam, PersonalAccount ,Register};

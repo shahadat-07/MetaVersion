@@ -4,6 +4,7 @@ import { Link } from "react-awesome-slider/dist/navigation";
 const LinkItem = ({ slug, slugParam, text, className = "" }) => {
   return (
     <Link
+      
       className={`${slug === slugParam ? "selected bg-gray-700 rounded-md" : null}`}
       href={`/${slugParam}`}
     >
