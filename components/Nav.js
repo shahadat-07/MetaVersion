@@ -62,7 +62,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute -right-[50%] sm:right-0 z-10 w-[300px] h-[400] md:w-[400px] md:h-[500px]">
+                <Popover.Panel className="absolute -right-[80%] sm:right-0 z-10 w-[300px] h-[400] md:w-[400px] md:h-[500px]">
                   <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5">
                     <div className="relative bg-[#553CDF] rounded-md">
                       <form className="rounded px-8 pt-6 pb-8 mb-4 text-white">
