@@ -43,7 +43,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
             <>
               <Popover.Button
                 onClick={() => setTimeout(setIsOpen(false), 1500)}
-                className=""
+                className="focus:outline-0"
               >
                 <div className="h-8 md:h-14 w-10 md:w-14 relative xl:hidden">
                   <Image
