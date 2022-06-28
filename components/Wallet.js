@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import Button from "./Button";
 
 
-export default function ConnectWallet() {
+export default function Wallet() {
   return (
     <div className="xl:px-4">
       <Popover className="relative">
@@ -11,7 +11,7 @@ export default function ConnectWallet() {
           <>
             <Popover.Button
               className="font-extended text-sm 2xl:text-base text-center
-              text-[#F2F2F2] py-2 2xl:py-3 px-4 2xl:px-8 3xl:text-lg rounded-[80px] bg-[#553CDF]"
+              text-[#F2F2F2] py-3 2xl:py-3 px-4 2xl:px-8 3xl:text-lg rounded-[80px] bg-[#553CDF]"
             >
               <span className="">Connect Wallet</span>
             </Popover.Button>

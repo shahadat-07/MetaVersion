@@ -11,11 +11,11 @@ import Image from "next/image";
 import userImg from "../assets/images/Vector.svg";
 import wallet from "../assets/images/wallet-svgrepo-com.svg";
 import Logo from "../assets/images/Logo.svg";
+import Wallet from './Wallet';
 
 const Nav = withNavigationContext(({ fullpage }) => {
   const { slug } = fullpage.navigation;
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
 
   const LinkItem = ({ slug, slugParam, text, className = "" }) => {
     return (
@@ -235,10 +235,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
             </div>
             <div className="hidden xl:block">
               <div className="flex items-center">
-                <div>
-                  <ConnectWallet />
-                </div>
-
+                < Wallet />
                 <a href="#">
                   <Image
                     src={userImg}
@@ -302,19 +299,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
                     text="Our Team"
                     className="hover:bg-gray-700"
                   />
-                  {/* <LinkItem
-                    slug={slug}
-                    slugParam="personal-account"
-                    text="Personal Account"
-                  /> */}
-                  {/* <Link to="/register">
-                    <Button className="bg-[#553CDF] block sm:w-[50%] lg:w-[25%] mt-2">
-                      Connect wallet
-                    </Button>
-                  </Link> */}
-                  {/* <ConnectWallet
-                    onClick={() => setTimeout(setIsOpen(false), 1000)}
-                  /> */}
+               
                 </div>
               </div>
             )}

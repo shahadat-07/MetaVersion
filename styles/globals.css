@@ -66,3 +66,26 @@ footer {
     background-position: center 70px;
 }
 
+.bg-member-1{
+    background-image: url('/member-1.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.bg-member-2{
+    background-image: url('/member-2.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+.bg-member-3{
+    background-image: url('/member-3.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.bg-member-4{
+  background-image: url('/member-4.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

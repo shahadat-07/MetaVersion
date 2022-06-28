@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       screens:{
         '3xl':'1950px'
-      }
+      },
     },
     fontFamily: {
       narrow: ["Pilat Narrow", "Open Sans"],
