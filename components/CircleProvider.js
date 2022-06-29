@@ -7,7 +7,7 @@ export const TextCircle = ({
 }) => {
   return (
     <div
-      className={`z-10 absolute hover:animate-ping rounded-full text-white font-extended font-semibold flex justify-center items-center ${fontSize} ${circleSize} ${position} ${background}`}
+      className={` absolute hover:animate-ping rounded-full text-white font-extended font-semibold flex justify-center items-center ${fontSize} ${circleSize} ${position} ${background}`}
     >
       {text}
     </div>
@@ -23,7 +23,7 @@ export const Circle = ({
   }) => {
     return (
       <div
-        className={`z-10 absolute hover:animate-ping rounded-full  ${circleSize} ${position} ${background}`}
+        className={` absolute hover:animate-ping rounded-full  ${circleSize} ${position} ${background}`}
       >
         {text}
       </div>
@@ -36,7 +36,7 @@ export const Circle = ({
     background="",
     position,
     topBackground,
-    circleSize = "w-[110px] h-[110px] md:w-[120px] md:h-[120px] lg:w-[130px] lg:h-[130px] 3xl:w-[180px] 3xl:h-[180px]",
+    circleSize = "z-[1000] w-[110px] h-[110px] md:w-[120px] md:h-[120px] lg:w-[130px] lg:h-[130px] 3xl:w-[180px] 3xl:h-[180px]",
     fontSize = "text-[10px] lg:text-[12px] 3xl:text-[18px]",
   }) => {
     return (
