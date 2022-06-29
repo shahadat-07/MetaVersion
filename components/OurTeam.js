@@ -126,7 +126,7 @@ const OurTeam = withNavigationContext(({ fullpage }) => {
 
               <Circle
                 text="3"
-                position=" top-[53%] left-[60%] lg:top-[55%] lg:left-[76%] lg:top-[32%] lg:left-[8%]"
+                position=" top-[51%] left-[60%] lg:top-[55%] lg:left-[76%] lg:top-[32%] lg:left-[8%]"
                 background="bg-[#5CA1B2]"
               />
 
