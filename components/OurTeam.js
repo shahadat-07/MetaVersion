@@ -104,7 +104,7 @@ const OurTeam = withNavigationContext(({ fullpage }) => {
 
               <TextCircle
                 text="Pinksale 15"
-                position="top-[3%] left-[60%]"
+                position="top-[3%] left-[60%] lg:top-[45%] lg:left-[53%]"
                 background="bg-[#5CA1B2] "
                 circleSize="w-[75px] h-[75px] 3xl:hidden"
               />

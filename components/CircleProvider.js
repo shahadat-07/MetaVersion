@@ -33,7 +33,7 @@ export const Circle = ({
 
   export const ImageCircle = ({
     text,
-    background,
+    background="",
     position,
     topBackground,
     circleSize = "w-[110px] h-[110px] md:w-[120px] md:h-[120px] lg:w-[130px] lg:h-[130px] 3xl:w-[180px] 3xl:h-[180px]",
