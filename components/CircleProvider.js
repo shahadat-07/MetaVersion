@@ -40,7 +40,7 @@ export const Circle = ({
     fontSize = "text-[10px] lg:text-[12px] 3xl:text-[18px]",
   }) => {
     return (
-        <div className={`absolute hover:animate-bounce rounded-full cursor-pointer ${position} ${topBackground}`}>
+        <div className={`absolute z-[1000] hover:animate-bounce rounded-full cursor-pointer ${position} ${topBackground}`}>
         <div className={`relative z-[1000] ${background} transition duration-300 opacity-0 hover:opacity-100 rounded-full ${circleSize}`}>
           <p className={`absolute top-1/2 text-center transform -translate-y-1/2 font-extended text-white font-semibold ${fontSize}`}>
            {text}
