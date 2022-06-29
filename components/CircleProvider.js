@@ -2,8 +2,8 @@ export const TextCircle = ({
   text,
   background,
   position,
-  circleSize = "w-[80px] h-[80px] lg:w-[100px] lg:h-[100px]",
-  fontSize = "text-[8px] lg:text-[12px]",
+  circleSize = "w-[80px] h-[80px] md:w-[100px] md:h-[100px] 3xl:w-[150px] 3xl:h-[150px]",
+  fontSize = "text-[8px] lg:text-[12px] 3xl:text-[18px]",
 }) => {
   return (
     <div
@@ -16,10 +16,10 @@ export const TextCircle = ({
 
 
 export const Circle = ({
-    text,
+    text="",
     background,
     position,
-    circleSize = "w-[45px] h-[45px] lg:w-[60px] lg:h-[60px]",
+    circleSize = "w-[45px] h-[45px] md:w-[60px] md:h-[60px] 3xl:w-[110px] 3xl:h-[110px]",
   }) => {
     return (
       <div
@@ -36,8 +36,8 @@ export const Circle = ({
     background,
     position,
     topBackground,
-    circleSize = "w-[110px] h-[110px] lg:w-[130px] lg:h-[130px]",
-    fontSize = "text-[10px] lg:text-[12px]",
+    circleSize = "w-[110px] h-[110px] md:w-[120px] md:h-[120px] lg:w-[130px] lg:h-[130px] 3xl:w-[180px] 3xl:h-[180px]",
+    fontSize = "text-[10px] lg:text-[12px] 3xl:text-[18px]",
   }) => {
     return (
         <div className={`absolute hover:animate-bounce rounded-full cursor-pointer ${position} ${topBackground}`}>
