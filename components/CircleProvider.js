@@ -2,8 +2,8 @@ export const TextCircle = ({
   text,
   background,
   position,
-  circleSize = "w-[80px] h-[80px] md:w-[100px] md:h-[100px] 3xl:w-[150px] 3xl:h-[150px]",
-  fontSize = "text-[8px] lg:text-[12px] 3xl:text-[18px]",
+  circleSize = "w-[70px] h-[70px] md:w-[100px] md:h-[100px] 3xl:w-[150px] 3xl:h-[150px]",
+  fontSize = "text-[7px] lg:text-[12px] 3xl:text-[18px]",
 }) => {
   return (
     <div
@@ -16,10 +16,10 @@ export const TextCircle = ({
 
 
 export const Circle = ({
-    text="",
+    text,
     background,
     position,
-    circleSize = "w-[45px] h-[45px] md:w-[60px] md:h-[60px] 3xl:w-[110px] 3xl:h-[110px]",
+    circleSize = "w-[40px] h-[40px] md:w-[60px] md:h-[60px] 3xl:w-[110px] 3xl:h-[110px]",
   }) => {
     return (
       <div
@@ -36,7 +36,7 @@ export const Circle = ({
     background="bg-slate-900",
     position,
     topBackground,
-    circleSize = "z-[1000] w-[110px] h-[110px] md:w-[120px] md:h-[120px] lg:w-[130px] lg:h-[130px] 3xl:w-[180px] 3xl:h-[180px]",
+    circleSize = "z-[1000] w-[100px] h-[100px] md:w-[120px] md:h-[120px] lg:w-[130px] lg:h-[130px] 3xl:w-[180px] 3xl:h-[180px]",
     fontSize = "text-[10px] lg:text-[12px] 3xl:text-[18px]",
   }) => {
     return (

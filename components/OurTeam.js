@@ -14,8 +14,8 @@ const OurTeam = withNavigationContext(({ fullpage }) => {
     >
       <div className="our-team-bg ">
         <PageLayout className="flex flex-col lg:flex-row items-center">
-          <div className="basis-1/4 flex-1 mt-16">
-            <HeadingOne className="mb-3 md:mb-4 lg:mb-8 lg:leading">
+          <div className="basis-1/4 flex-1 mt-20 lg:mt-0 ">
+            <HeadingOne className="mb-3 md:mb-4 lg:mb-4 lg:leading">
               Our team
             </HeadingOne>
             <div className="text-white mb-6 font-narrow font-medium text-sm lg:text-base 3xl:text-4xl 3xl:leading-[55px]">
@@ -36,63 +36,63 @@ const OurTeam = withNavigationContext(({ fullpage }) => {
               <ImageCircle
                 text="23 Max CEO & CTO"
                 background="bg-slate-900"
-                position="top-[10%] left-[30%] lg:top-[35%] lg:left-[68%]"
+                position="left-[28%] lg:top-[35%] lg:left-[68%]"
                 topBackground="bg-member-1"
               />
 
               <ImageCircle
                 text="9 Max CEO & CTO"
                 background="bg-slate-700"
-                position="top-[27%] left-[63%] lg:top-[31%] lg:left-[37%] "
+                position="top-[20%] left-[70%] lg:top-[31%] lg:left-[37%] "
                 topBackground="bg-member-2"
               />
 
               <ImageCircle
                 text="10 Max CEO & CTO"
                 background="bg-slate-700"
-                position="top-[22%] left-[3%] lg:top-[60%] lg:left-[16%] "
+                position="top-[19%] left-[2%] lg:top-[60%] lg:left-[16%] "
                 topBackground=" bg-member-3"
               />
 
               <ImageCircle
                 text="23 Max CEO & CTO"
                 background="bg-slate-900"
-                position="top-[40%] left-[35%] lg:top-[65%] lg:left-[45%]"
+                position="top-[37%] left-[35%] lg:top-[65%] lg:left-[45%]"
                 topBackground="bg-member-4"
               />
 
               <TextCircle
                 text="UX 1"
-                position=" left-[30%]  lg:top-[18%] lg:left-[40%]"
-                circleSize="w-[75px] h-[75px]"
+                position=" left-[30%] top-[14%] lg:top-[18%] lg:left-[40%]"
+                circleSize="w-[60px] h-[60px] lg:top-[w-[75px] lg:h-[75px]"
                 background="bg-[#8163A8]"
-                fontSize="text-[16px] lg:text-[20px]"
+                fontSize="text-[14px] lg:text-[20px]"
               />
 
               <TextCircle
                 text="CoinGecko 2"
-                position=" top-[42%] left-[70%] lg:top-[17%] lg:left-[54%]"
+                position=" top-[12%] left-[58%] lg:top-[17%] lg:left-[54%]"
                 background="bg-[#C53479]"
               />
 
               <TextCircle
-                text="  CoinMar    
+                text="CoinMar    
                 ketCap 4"
-                position="top-[24%] left-[37%] lg:left-[0px] lg:top-[40%]"
+                position="top-[23%] left-[40%] lg:left-[0px] lg:top-[40%]"
                 background="bg-[#290A88]"
               />
 
               <TextCircle
                 text="6 Binance"
-                position="top-[10%] left-[3%] lg:top-[35%] lg:left-[17%]"
+                position="top-[8%] left-[2%] lg:top-[35%] lg:left-[17%]"
                 background="bg-[#F2C94C]"
               />
 
               <TextCircle
                 text="Coinpaprika"
-                position=" top-[13%] left-[62%] lg:top-[46%] lg:left-[27%]"
+                position=" top-[35%] lg:top-[46%] lg:left-[27%]"
                 background="bg-[#C53479]"
-                circleSize="w-[110px] h-[110px] lg:w-[130px] lg:h-[130px] 3xl:w-[180px] 3xl:h-[180px]"
+                circleSize="w-[100px] h-[100px] lg:w-[130px] lg:h-[130px] 3xl:w-[180px] 3xl:h-[180px]"
               />
 
               <TextCircle
@@ -104,14 +104,14 @@ const OurTeam = withNavigationContext(({ fullpage }) => {
 
               <TextCircle
                 text="Pinksale 15"
-                position="top-[3%] left-[60%] lg:top-[45%] lg:left-[53%]"
+                position="top-[2%] left-[64%] lg:top-[45%] lg:left-[53%]"
                 background="bg-[#5CA1B2] "
                 circleSize="w-[75px] h-[75px] 3xl:hidden"
               />
 
               <TextCircle
                 text="20 Pancake Swap"
-                position="top-[37%] left-[5%] lg:top-[58%] lg:left-[65%]"
+                position=" top-[35%] left-[70%] lg:top-[58%] lg:left-[65%]"
                 circleSize="w-[90px] h-[90px] 3xl:w-[140px] 3xl:h-[140px]"
                 background="bg-[#08A1E3]"
               />
@@ -126,7 +126,7 @@ const OurTeam = withNavigationContext(({ fullpage }) => {
 
               <Circle
                 text="3"
-                position=" top-[51%] left-[60%] lg:top-[55%] lg:left-[76%] lg:top-[32%] lg:left-[8%]"
+                position=" top-[32%] left-[58%] lg:top-[55%] lg:left-[76%] lg:top-[32%] lg:left-[8%]"
                 background="bg-[#5CA1B2]"
               />
 
@@ -175,21 +175,21 @@ const OurTeam = withNavigationContext(({ fullpage }) => {
 
               <Circle
                 text="18"
-                position="top-[34%] left-[35%] lg:top-[60%] lg:left-[57%]"
+                position="top-[30%] left-[25%] lg:top-[60%] lg:left-[57%]"
                 background="bg-[#F2C94C]"
                 circleSize="w-[45px] h-[45px]  "
               />
 
               <Circle
                 text="19"
-                position=" top-[50%] left-[15%] lg:top-[53%] lg:left-[61%]"
+                position=" hidden lg:block lg:top-[53%] lg:left-[61%]"
                 background="bg-[#C53479]"
                 circleSize="w-[45px] h-[45px] 3xl:w-[90px] 3xl:h-[90px] "
               />
 
               <Circle
                 text="22"
-                position="top-[3%] left-[8%] "
+                position="top-[1%] left-[10%] "
                 background="bg-[#C53479]"
                 circleSize="w-[45px] h-[45px]  "
               />
