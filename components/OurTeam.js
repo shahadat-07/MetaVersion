@@ -37,14 +37,14 @@ const OurTeam = withNavigationContext(({ fullpage }) => {
                 text="23 Max CEO & CTO"
                 background="bg-slate-900"
                 position="top-[10%] left-[30%] lg:top-[35%] lg:left-[68%]"
-                topBackground=" bg-member-1"
+                topBackground="bg-member-1"
               />
 
               <ImageCircle
                 text="9 Max CEO & CTO"
                 background="bg-slate-700"
                 position="top-[27%] left-[63%] lg:top-[31%] lg:left-[37%] "
-                topBackground=" bg-member-2"
+                topBackground="bg-member-2"
               />
 
               <ImageCircle
@@ -58,7 +58,7 @@ const OurTeam = withNavigationContext(({ fullpage }) => {
                 text="23 Max CEO & CTO"
                 background="bg-slate-900"
                 position="top-[40%] left-[35%] lg:top-[65%] lg:left-[45%]"
-                topBackground=" bg-member-4"
+                topBackground="bg-member-4"
               />
 
               <TextCircle

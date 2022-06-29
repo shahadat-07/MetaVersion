@@ -33,7 +33,7 @@ export const Circle = ({
 
   export const ImageCircle = ({
     text,
-    background="",
+    background="bg-slate-900",
     position,
     topBackground,
     circleSize = "z-[1000] w-[110px] h-[110px] md:w-[120px] md:h-[120px] lg:w-[130px] lg:h-[130px] 3xl:w-[180px] 3xl:h-[180px]",
@@ -41,7 +41,7 @@ export const Circle = ({
   }) => {
     return (
         <div className={`absolute hover:animate-bounce rounded-full cursor-pointer ${position} ${topBackground}`}>
-        <div className={`relative z-[1000] hover:${background} transition duration-300 opacity-0 hover:opacity-100 rounded-full ${circleSize}`}>
+        <div className={`relative z-[1000] ${background} transition duration-300 opacity-0 hover:opacity-100 rounded-full ${circleSize}`}>
           <p className={`absolute top-1/2 text-center transform -translate-y-1/2 font-extended text-white font-semibold ${fontSize}`}>
            {text}
           </p>
