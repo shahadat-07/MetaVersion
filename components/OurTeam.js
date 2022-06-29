@@ -18,7 +18,7 @@ const OurTeam = withNavigationContext(({ fullpage }) => {
             <HeadingOne className="mb-3 md:mb-4 lg:mb-8 lg:leading">
               Our team
             </HeadingOne>
-            <div className="text-white mb-6 font-narrow font-medium text-sm lg:text-lg 3xl:text-4xl 3xl:leading-[55px]">
+            <div className="text-white mb-6 font-narrow font-medium text-sm lg:text-base 3xl:text-4xl 3xl:leading-[55px]">
               <p>
                 - Buy, sell and look for new partners in the NFT marketplace of
                 the future{" "}
