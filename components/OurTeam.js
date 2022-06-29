@@ -2,13 +2,9 @@ import React from "react";
 import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import HeadingOne from "./HeadingOne";
 import PageLayout from "./PageLayout";
-// import member1 from "../assets/images/member-1.svg"
-// import member2 from "../assets/images/member-2.svg"
-// import member3 from "../assets/images/member-3.svg"
-// import member4 from "../assets/images/member-4.svg"
-import Image from "next/image";
-const OurTeam = withNavigationContext(({ fullpage }) => {
+import { TextCircle, Circle, ImageCircle } from "./CircleProvider";
 
+const OurTeam = withNavigationContext(({ fullpage }) => {
   return (
     <section
       style={{
@@ -17,8 +13,8 @@ const OurTeam = withNavigationContext(({ fullpage }) => {
       className="bg-[#0B0819] w-[100vw] relative"
     >
       <div className="our-team-bg ">
-        <PageLayout className="flex items-center">
-          <div className="basis-1/4">
+        <PageLayout className="flex flex-col lg:flex-row items-center">
+          <div className="basis-1/4 flex-1  mt-12">
             <HeadingOne className="mb-3 md:mb-4 lg:mb-8 lg:leading">
               Our team
             </HeadingOne>
@@ -35,71 +31,168 @@ const OurTeam = withNavigationContext(({ fullpage }) => {
               </p>
             </div>
           </div>
-          <div className="basis-3/4 text-center">
-            <div className="relative h-screen " > 
-              <div className="absolute hover:animate-ping bg-[#5CA1B2] w-[60px] h-[60px] rounded-full top-[32%] left-[8%]" > </div>
+          <div className="basis-3/4 w-full flex-2lg:px-10 text-center">
+            <div className="relative h-screen">
+              <ImageCircle
+                text="23 Max CEO & CTO"
+                background="bg-slate-900"
+                position="top-[12%] left-[30%] lg:top-[35%] lg:left-[68%]"
+                topBackground=" bg-member-1"
+              />
 
-              <div className="absolute hover:animate-ping bg-[#290A88] w-[100px] h-[100px] rounded-full top-[40%] text-[12px] text-white font-extended font-semibold flex justify-center items-center" >CoinMar<br/>ketCap</div>
+              <ImageCircle
+                text="9 Max CEO & CTO"
+                background="bg-slate-700"
+                position="top-[32%] left-[60%] lg:top-[31%] lg:left-[37%] "
+                topBackground=" bg-member-2"
+              />
 
-              <div className="absolute hover:animate-ping bg-[#08A1E3] w-[90px] h-[90px] rounded-full top-[55%] left-[4%]" > </div>
+              <ImageCircle
+                text="10 Max CEO & CTO"
+                background="bg-slate-700"
+                position="top-[24%] left-[5%] lg:top-[60%] lg:left-[16%] "
+                topBackground=" bg-member-3"
+              />
 
-              <div className="absolute hover:animate-ping bg-[#F2C94C] w-[100px] h-[100px] rounded-full top-[35%] left-[17%] text-[12px] text-white font-extended font-semibold flex justify-center items-center" > Binance </div>
+              <ImageCircle
+                text="23 Max CEO & CTO"
+                background="bg-slate-900"
+                position="top-[50%] left-[20%] lg:top-[65%] lg:left-[45%]"
+                topBackground=" bg-member-4"
+              />
 
-              <div className="absolute hover:animate-ping bg-[#664E84] w-[60px] h-[60px] rounded-full top-[49%] left-[15%]" > </div>
+              <TextCircle
+                text="UX 1"
+                position=" top-[2%] left-[30%]  lg:top-[18%] lg:left-[40%]"
+                circleSize="w-[75px] h-[75px]"
+                background="bg-[#8163A8]"
+                fontSize="text-[16px] lg:text-[20px]"
+              />
 
-              <div className="absolute hover:animate-ping bg-[#C53479] w-[60px] h-[60px] rounded-full top-[30%] left-[29%]" > </div>
+              <TextCircle
+                text="CoinGecko 2"
+                position=" top-[47%] left-[70%] lg:top-[17%] lg:left-[54%]"
+                background="bg-[#C53479]"
+              />
 
-              <div className="absolute z-[1000]  hover:animate-bounce bg-member-1 w-[130px] h-[130px] rounded-full top-[31%] left-[37%] cursor-pointer" > 
-                <div className="relative hover:bg-orange-300 transition duration-300 opacity-0 hover:opacity-100 w-[130px] h-[130px] rounded-full">
-                    <p className=" absolute top-1/2 text-center transform -translate-y-1/2 font-extended text-white font-semibold text-[12px]"> Max CEO & CTO  </p>
-                </div>
-               </div>
+              <TextCircle
+                text="  CoinMar    
+                ketCap 4"
+                position="top-[27%] left-[37%] lg:left-[0px] lg:top-[40%]"
+                background="bg-[#290A88]"
+              />
 
-              <div className="absolute hover:animate-ping bg-[#C53479] w-[130px] h-[130px] rounded-full top-[46%] left-[27%] text-[12px] text-white font-extended font-semibold flex justify-center items-center" > Coinpaprika </div>
-              <div className="absolute z-[1000] hover:animate-bounce bg-member-3 w-[130px] h-[130px] rounded-full top-[60%] left-[16%] cursor-pointer" > 
-                <div className="relative  hover:bg-slate-700 transition duration-300 opacity-0 hover:opacity-100 w-[130px] h-[130px] rounded-full">
-                    <p className=" absolute top-1/2 text-center transform -translate-y-1/2 font-extended text-white font-semibold text-[12px]"> Max CEO & CTO  </p>
-                </div>
-               </div>
-              <div className="absolute hover:animate-ping bg-[#F2C94C] w-[60px] h-[60px] rounded-full top-[73%] left-[8%]" > </div>
+              <TextCircle
+                text="6 Binance"
+                position="top-[12%] left-[3%] lg:top-[35%] lg:left-[17%]"
+                background="bg-[#F2C94C]"
+              />
 
-              <div className="absolute hover:animate-ping bg-[#664E84] w-[90px] h-[90px] rounded-full top-[72%] left-[32%] text-[12px] text-white font-extended font-semibold flex justify-center items-center" > Poo Coin </div>
+              <TextCircle
+                text="Coinpaprika"
+                position=" top-[15%] left-[62%] lg:top-[46%] lg:left-[27%]"
+                background="bg-[#C53479]"
+                circleSize="w-[130px] h-[130px]"
+              />
 
-              <div className="absolute hover:animate-ping bg-[#553CDF] w-[60px] h-[60px] rounded-full top-[63%] left-[33%]" > </div>
+              <TextCircle
+                text="12 Poo Coin"
+                position="top-[72%] left-[32%]"
+                background="bg-[#664E84]"
+                circleSize="w-[90px] h-[90px]"
+              />
 
-              <div className="absolute hover:animate-ping bg-[#8163A8] w-[60px] h-[60px] rounded-full top-[55%] left-[45%]" > </div>
+              <TextCircle
+                text="Pinksale 15"
+                position="top-[5%] left-[60%]"
+                background="bg-[#5CA1B2] "
+                circleSize="w-[75px] h-[75px]"
+              />
 
-              <div className="absolute hover:animate-ping bg-[#5CA1B2] w-[75px] h-[75px] rounded-full top-[45%] left-[53%] text-[12px] text-white font-extended font-semibold flex justify-center items-center" > 
-                Pinksale
-              </div>
+              <TextCircle
+                text="20 Pancake Swap"
+                position="top-[37%] left-[25%] lg:top-[58%] lg:left-[65%]"
+                circleSize="w-[90px] h-[90px]"
+                background="bg-[#08A1E3]"
+              />
 
-              <div className="absolute hover:animate-ping bg-[#553CDF] w-[80px] h-[80px] rounded-full top-[32%] left-[57%]" > </div>
+              <TextCircle
+                text="21 DEXT"
+                position=" top-[70%] left-[74%]"
+                background="bg-[#C53479]"
+                circleSize=" w-[90px] h-[90px]"
+                fontSize="text-[16px]"
+              />
 
-              <div className="absolute hover:animate-ping bg-[#C53479] w-[100px] h-[100px] rounded-full top-[17%] left-[54%] text-[12px] text-white font-extended font-semibold flex justify-center items-center" > CoinGecko </div>
+              <Circle
+                text="3"
+                position="top-[45%] left-[50%] lg:top-[55%] lg:left-[76%] lg:top-[32%] lg:left-[8%]"
+                background="bg-[#5CA1B2]"
+              />
 
-              <div className="absolute hover:animate-ping bg-[#8163A8] w-[75px] h-[75px] rounded-full top-[18%] left-[40%] text-[22px] text-white font-extended font-semibold flex justify-center items-center" > UX </div>
+              <Circle
+                text="5"
+                position="hidden lg:blcok lg:top-[55%] lg:left-[4%]"
+                background="bg-[#08A1E3]"
+              />
 
-              <div className="absolute z-[1000] hover:animate-bounce bg-member-4 w-[130px] h-[130px] rounded-full top-[65%] left-[45%] cursor-pointer" > 
-                <div className="relative hover:bg-slate-900 transition duration-300 opacity-0 hover:opacity-100 w-[130px] h-[130px] rounded-full">
-                    <p className=" absolute top-1/2 text-center transform -translate-y-1/2 font-extended text-white font-semibold text-[12px]"> Max CEO & CTO  </p>
-                </div>
-               </div>
+              <Circle
+                text="7"
+                position="top-[45%] left-[10%] lg:top-[49%] lg:left-[15%]"
+                background="bg-[#664E84] "
+              />
 
-               <div className="absolute hover:animate-ping bg-[#F2C94C] w-[45px] h-[45px] rounded-full top-[60%] left-[57%]" > </div>
+              <Circle
+                text="8"
+                position="hidden lg:block lg:top-[30%] lg:left-[29%]"
+                background="bg-[#C53479] "
+              />
 
-               <div className="absolute hover:animate-ping bg-[#C53479] w-[45px] h-[45px] rounded-full top-[53%] left-[61%]" > </div>
+              <Circle
+                text="11"
+                position="top-[73%] left-[8%]"
+                background="bg-[#F2C94C]  "
+              />
 
-               <div className="absolute hover:animate-ping bg-[#08A1E3] w-[90px] h-[90px] rounded-full top-[58%] left-[65%] text-[12px] text-white font-extended font-semibold flex justify-center items-center" > Pancake<br/>Swap </div>
+              <Circle
+                text="13"
+                position="hidden lg:block top-[63%] left-[33%]"
+                background="bg-[#553CDF]  "
+              />
 
-               <div className="absolute hover:animate-ping bg-[#C53479] w-[90px] h-[90px] rounded-full top-[70%] left-[74%] text-[16px] text-white font-extended font-semibold flex justify-center items-center" > DEXT </div>
+              <Circle
+                text="14"
+                position="hidden lg:block lg:top-[55%] lg:left-[45%]"
+                background="bg-[#8163A8]   "
+              />
 
-               <div className="absolute hover:animate-ping bg-[#C53479] w-[45px] h-[45px] rounded-full top-[55%] left-[76%]" > </div>
+              <Circle
+                text="16"
+                position="hidden lg:blcok lg:top-[32%] lg:left-[57%]"
+                background="bg-[#553CDF]"
+                circleSize="w-[80px] h-[80px] "
+              />
 
-               <div className="absolute hover:animate-bounce bg-member-2 w-[130px] h-[130px] rounded-full top-[35%] left-[68%] cursor-pointer" > 
-                <div className="relative z-[1000] hover:bg-slate-900 transition duration-300 opacity-0 hover:opacity-100 w-[130px] h-[130px] rounded-full">
-                    <p className=" absolute top-1/2 text-center transform -translate-y-1/2 font-extended text-white font-semibold text-[12px]"> Max CEO & CTO  </p>
-                </div>
-               </div>
+              <Circle
+                text="18"
+                position="top-[55%] lg:top-[60%] left-[57%]"
+                background="bg-[#F2C94C]"
+                circleSize="w-[45px] h-[45px]  "
+              />
+
+              <Circle
+                text="19"
+                position="hidden lg:blcok top-[53%] left-[61%]"
+                background="bg-[#C53479]"
+                circleSize="w-[45px] h-[45px]  "
+              />
+
+              <Circle
+                text="22"
+                position="top-[5%] left-[8%] "
+                background="bg-[#C53479]"
+                circleSize="w-[45px] h-[45px]  "
+              />
             </div>
           </div>
         </PageLayout>
