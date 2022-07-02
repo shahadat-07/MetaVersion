@@ -1,31 +1,81 @@
-import React from "react";
-import { withNavigationContext } from "react-awesome-slider/dist/navigation";
+import React, { useState } from "react";
 import PageLayout from "./PageLayout";
-import Image from "next/image";
-import lineHorizontal from "../assets/images/lines.png";
-import lineVertical from "../assets/images/lines-2.png";
-import greenIcon from "../assets/images/Green Icon.svg";
-import yellowIcon from "../assets/images/YellowIcon.svg";
-import TextBox from "./TextBox";
-import RoadMapBox from "./RoadMapBox";
-import progressBar from "../assets/images/lines.png";
-import HeadingOne from "./HeadingOne";
-const OurTeam = withNavigationContext(({ fullpage }) => {
+import { Link } from "react-awesome-slider/dist/navigation";
+import {DashHome, Guides, NewCard, Merch ,Settings} from "./index"
+
+const OurTeam = () => {
+  const [name, setName] = useState("");
+
+
+  let showPage = "";
+
+
+  if (name === "home") {
+    showPage = <DashHome />
+  } else if (name === "guides") {
+    showPage = <Guides />
+  } else if (name === "card") {
+    showPage = <NewCard />
+  } else if (name === "merch") {
+    showPage = <Merch />
+  } else if (name === "settings") {
+    showPage = <Settings />
+  }
+
+  // let background = "";
+  // if ((!name == "")) {
+  //   background = "bg-red-500";
+  // }
 
   return (
     <section
-      style={{
-        background: "linear-gradient(150.23deg, #9A0059 1.85%, #160B8F 100%)",
-      }}
-      className="bg-[#0B0819] w-[100vw] relative"
+      className="bg-[#140C25] w-[100vw] relative"
     >
-      <div>
-      <PageLayout className="flex flex-col justify-center ">
-       <h1 className="text-6xl text-white font-bold text-center">Personal Account</h1>
-      </PageLayout>
+      <div className="bg-[#1F2736] w-screen fixed top-[75px]">
+        <div className="container flex justify-around mx-auto px-4 sm:px-16 3xl:px-0 w-[100vw] 3xl:max-w-[2000px]">
+          <button
+            onClick={() => {
+              setName("home");
+            }}
+            className={`hover:bg-[#5E45F5] p-4 text-white font-extended text-sm`}
+          >
+            Home
+          </button>
+          <button
+            onClick={() => {
+              setName("guides");
+            }}
+            className={`hover:bg-[#5E45F5] p-4 text-white font-extended text-sm`}
+          >
+            Guides
+          </button>
+          <button
+            onClick={() => setName("card")}
+            className={`hover:bg-[#5E45F5] p-4 text-white font-extended text-sm`}
+          >
+            Add a new card
+          </button>
+          <button
+            onClick={() => setName("merch")}
+            className={`hover:bg-[#5E45F5] p-4 text-white font-extended text-sm`}
+          >
+            Merch
+          </button>
+          <button
+            onClick={() => setName("settings")}
+            className={`hover:bg-[#5E45F5] p-4 text-white font-extended text-sm`}
+          >
+            Settings
+          </button>
+        </div>
       </div>
+      <PageLayout className="flex flex-col justify-center">
+        <div className="h-screen flex items-center justify-center">
+          {showPage}
+        </div>
+      </PageLayout>
     </section>
   );
-});
+};
 
 export default OurTeam;

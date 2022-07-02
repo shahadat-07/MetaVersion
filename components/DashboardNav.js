@@ -1,134 +1,17 @@
 import React, { useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import { Fragment } from "react";
 import Button from "./Button";
-import {
-  withNavigationContext,
-  Link,
-} from "react-awesome-slider/dist/navigation";
 import Container from "./Container";
 import Image from "next/image";
 import userImg from "../assets/images/Vector.svg";
 import wallet from "../assets/images/wallet-svgrepo-com.svg";
 import Logo from "../assets/images/Logo.svg";
 import Wallet from "./Wallet";
+import Link from "next/link";
 
-const Nav = withNavigationContext(({ fullpage }) => {
-  const { slug } = fullpage.navigation;
+const DashboardNav = (() => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const LinkItem = ({ slug, slugParam, text, className = "" }) => {
-    return (
-      <Link
-        onClick={() => setTimeout(setIsOpen(false), 50000)}
-        className={`${
-          slug === slugParam ? "selected bg-gray-700 rounded-md" : null
-        }`}
-        href={`/${slugParam}`}
-      >
-        <span
-          className={`text-white hover:bg-gray-800 rounded-md block px-3 py-2 font-medium ${className}`}
-        >
-          {text}
-        </span>
-      </Link>
-    );
-  };
-
-  function ConnectWallet() {
-    return (
-      <div className="xl:px-4">
-        <Popover className="relative">
-          {({ open }) => (
-            <>
-              <Popover.Button
-                onClick={() => setTimeout(setIsOpen(false), 1500)}
-                className="focus:outline-0"
-              >
-                <div className="h-8 md:h-14 w-10 md:w-14 relative xl:hidden">
-                  <Image
-                    src={wallet}
-                    alt="Picture of wallet"
-                    layout="fill" // required
-                  />
-                </div>
-              </Popover.Button>
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
-              >
-                <Popover.Panel className="absolute -right-[80%] sm:right-0 z-10 w-[300px] h-[400] md:w-[400px] md:h-[500px]">
-                  <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5">
-                    <div className="relative bg-[#553CDF] rounded-md">
-                      <form className="rounded px-8 pt-6 pb-8 mb-4 text-white">
-                        <p className="mb-4 text-center font-narrow font-semibold">
-                          First time here ? Please register.
-                        </p>
-
-                        <div className="mb-2">
-                          <label
-                            className="block text-sm font-medium mb-2 font-extended text-white"
-                            htmlFor="telegram"
-                          >
-                            Telegram
-                          </label>
-                          <input
-                            className="shadow appearance-none border bg-gray-200 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                            id="text"
-                            type="text"
-                            placeholder=""
-                          />
-                        </div>
-                        <div className="mb-2">
-                          <label
-                            className="block text-sm font-medium mb-2 font-extended text-white"
-                            htmlFor="email"
-                          >
-                            E-mail
-                          </label>
-                          <input
-                            className="shadow appearance-none border bg-gray-200 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                            id="email"
-                            type="email"
-                            placeholder=""
-                          />
-                        </div>
-                        <div className="mb-2">
-                          <label
-                            className="block  text-sm font-medium mb-2 font-extended text-white"
-                            htmlFor="text"
-                          >
-                            Metaverse
-                          </label>
-                          <input
-                            className="shadow appearance-none border bg-gray-200 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                            id="text"
-                            type="text"
-                            placeholder=""
-                          />
-                        </div>
-                        <div className="text-center">
-                          <button className="bg-[#553CDF] shadow-xl font-extended text-sm md:text-base text-center font-medium text-[#F2F2F2] py-3 px-8 rounded-[80px]">
-                            {" "}
-                            Register{" "}
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </Popover.Panel>
-              </Transition>
-            </>
-          )}
-        </Popover>
-      </div>
-    );
-  }
 
   return (
     <header
@@ -136,7 +19,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
       className="fixed top-0 left-0 z-[101] w-full bg-[#131A17]"
     >
       <Container>
-        <nav className="bg-[#131A17] py-2 3xl:py-6">
+        <nav className="bg-[#131A17] py-3 3xl:py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <div className="flex space-x-4 items-center flex-shrink-0 text-white mr-6">
@@ -315,4 +198,4 @@ const Nav = withNavigationContext(({ fullpage }) => {
   );
 });
 
-export default Nav;
+export default DashboardNav;

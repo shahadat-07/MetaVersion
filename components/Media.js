@@ -47,14 +47,9 @@ export const media = [
     className: "",
     children: <OurTeam />,
   },
-  // {
-  //   slug: "personal-account",
-  //   className: "",
-  //   children: <PersonalAccount />,
-  // },
-  // {
-  //   slug: "register",
-  //   className: "xl:hidden",
-  //   children: <Register />,
-  // },
+  {
+    slug: "personal-account",
+    className: "",
+    children: <PersonalAccount />,
+  },
 ];
