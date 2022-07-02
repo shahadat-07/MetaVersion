@@ -9,7 +9,6 @@ import {
   MagicNFT,
   OurTeam,
   PersonalAccount,
-  Register
 } from "./index";
 
 export const media = [
