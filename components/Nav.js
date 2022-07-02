@@ -11,7 +11,7 @@ import Image from "next/image";
 import userImg from "../assets/images/Vector.svg";
 import wallet from "../assets/images/wallet-svgrepo-com.svg";
 import Logo from "../assets/images/Logo.svg";
-import Wallet from './Wallet';
+import Wallet from "./Wallet";
 
 const Nav = withNavigationContext(({ fullpage }) => {
   const { slug } = fullpage.navigation;
@@ -145,7 +145,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
                 </Link>
                 <Link href="/">
                   <span className="font-medium text-lg md:text-2xl 3xl:text-4xl tracking-tight font-narrow">
-                    Metavision
+                    My Verse
                   </span>
                 </Link>
               </div>
@@ -173,11 +173,11 @@ const Nav = withNavigationContext(({ fullpage }) => {
                   />
                   <LinkItem slug={slug} slugParam="road-map" text="Roadmap" />
                   <LinkItem slug={slug} slugParam="our-team" text="Our Team" />
-                  {/* <LinkItem
+                  <LinkItem
                     slug={slug}
                     slugParam="personal-account"
                     text="Personal Account"
-                  /> */}
+                  />
                 </div>
               </div>
             </div>
@@ -235,7 +235,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
             </div>
             <div className="hidden xl:block">
               <div className="flex items-center">
-                < Wallet />
+                <Wallet />
                 <a href="#">
                   <Image
                     src={userImg}
@@ -299,7 +299,12 @@ const Nav = withNavigationContext(({ fullpage }) => {
                     text="Our Team"
                     className="hover:bg-gray-700"
                   />
-               
+
+                  <LinkItem
+                    slug={slug}
+                    slugParam="personal-account"
+                    text="Personal Account"
+                  />
                 </div>
               </div>
             )}
