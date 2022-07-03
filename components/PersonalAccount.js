@@ -22,22 +22,17 @@ const OurTeam = () => {
     showPage = <Settings />
   }
 
-  // let background = "";
-  // if ((!name == "")) {
-  //   background = "bg-red-500";
-  // }
-
   return (
     <section
       className="bg-[#140C25] w-[100vw] relative"
     >
-      <div className="bg-[#1F2736] w-screen fixed top-[75px]">
-        <div className="container flex justify-around mx-auto px-4 sm:px-16 3xl:px-0 w-[100vw] 3xl:max-w-[2000px]">
+      <div className="bg-[#1F2736] w-screen fixed top-[55px] md:top-[75px] 3xl:top-[110px]">
+        <div className="container flex justify-around mx-auto px-4 sm:px-16 3xl:px-0 w-screen 3xl:max-w-[2000px]">
           <button
             onClick={() => {
               setName("home");
             }}
-            className={`hover:bg-[#5E45F5] p-4 text-white font-extended text-sm`}
+            className={`hover:bg-[#5E45F5] p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-3xl 3xl:p-8`}
           >
             Home
           </button>
@@ -45,25 +40,31 @@ const OurTeam = () => {
             onClick={() => {
               setName("guides");
             }}
-            className={`hover:bg-[#5E45F5] p-4 text-white font-extended text-sm`}
+            className={`hover:bg-[#5E45F5] p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-3xl 3xl:p-8`}
           >
             Guides
           </button>
           <button
             onClick={() => setName("card")}
-            className={`hover:bg-[#5E45F5] p-4 text-white font-extended text-sm`}
+            className={`hover:bg-[#5E45F5] hidden md:block p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-3xl 3xl:p-8`}
           >
             Add a new card
           </button>
           <button
+            onClick={() => setName("card")}
+            className={`hover:bg-[#5E45F5] md:hidden p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-3xl 3xl:p-8`}
+          >
+            Card
+          </button>
+          <button
             onClick={() => setName("merch")}
-            className={`hover:bg-[#5E45F5] p-4 text-white font-extended text-sm`}
+            className={`hover:bg-[#5E45F5] p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-3xl 3xl:p-8`}
           >
             Merch
           </button>
           <button
             onClick={() => setName("settings")}
-            className={`hover:bg-[#5E45F5] p-4 text-white font-extended text-sm`}
+            className={`hover:bg-[#5E45F5] p-3 sm:p:-4 text-white font-extended text-xs sm:text-sm 3xl:text-3xl 3xl:p-8`}
           >
             Settings
           </button>
