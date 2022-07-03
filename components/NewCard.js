@@ -7,7 +7,7 @@ import Image from "next/image";
 const NewCard = () => {
   const WrapperRow = ({ children }) => {
     return (
-      <div className="mb-4 2xl:mb-8 3xl:mb-14 flex flex-col md:flex-row justify-between">
+      <div className="mb-3 md:mb-4 2xl:mb-8 3xl:mb-14 flex flex-col md:flex-row justify-between">
         {" "}
         {children}{" "}
       </div>
@@ -58,11 +58,11 @@ const NewCard = () => {
     return (
       <div>
         <label
-          className={`block text-white font-medium mb-1 2xl:mb-4 3xl:mb-8 font-narrow 3xl:text-4xl 2xl:text-xl ${fontSize}`}
+          className={`block text-white font-medium md:mb-1 2xl:mb-4 3xl:mb-8 font-narrow 3xl:text-4xl 2xl:text-xl ${fontSize}`}
         >
           {labelOne}
         </label>
-        <label className="block text-[#A3A0A0] text-sm sm:text-sm font-medium mb-2 2xl:mb-4 3xl:mb-8 font-narrow 3xl:text-3xl 2xl:text-xl">
+        <label className="block text-[#A3A0A0] text-xs sm:text-sm font-medium mb-2 2xl:mb-4 3xl:mb-8 font-narrow 3xl:text-3xl 2xl:text-xl">
           {labelTwo}
         </label>
       </div>
@@ -81,7 +81,7 @@ const NewCard = () => {
   };
 
   return (
-    <div className="w-full max-w-2xl md:max-w-3xl 2xl:max-w-4xl 3xl:max-w-5xl">
+    <div className="w-full max-w-2xl md:max-w-3xl 2xl:max-w-4xl 3xl:max-w-screen-2xl	">
       <form>
         <div>
           <LabelBox
@@ -89,7 +89,7 @@ const NewCard = () => {
             labelOne="Card number"
             labelTwo="Enter the 16 digit card number on the card"
           />
-          <div className="flex justify-between items-center mt-5 mb-8">
+          <div className="flex justify-between items-center my-4 md:mt-5 md:mb-8">
             <PaymenetImgDrop />
             <Input
               type="text"
