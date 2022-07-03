@@ -7,7 +7,7 @@ const OurTeam = () => {
   const [name, setName] = useState("");
 
 
-  let showPage = "";
+  let showPage = <DashHome />;
 
 
   if (name === "home") {
