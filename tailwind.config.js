@@ -15,5 +15,5 @@ module.exports = {
       extended: ["Pilat Extended", "Open Sans"],
     },
   },
-  plugins: [require('tailwind-scrollbar')],
+  plugins: [],
 };
