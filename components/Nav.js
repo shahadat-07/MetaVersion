@@ -129,10 +129,10 @@ const Nav = withNavigationContext(({ fullpage }) => {
       </div>
     );
   }
+  // style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
 
   return (
     <header
-      style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
       className="fixed top-0 left-0 z-[101] w-full bg-[#131A17]"
     >
       <Container>
