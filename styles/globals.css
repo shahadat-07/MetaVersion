@@ -92,5 +92,12 @@ footer {
   background: url("/NFT.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 10px;
 }
+
+.bg-frame{
+  background-image: url("/image-frame.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/* bg-[url('/image-frame.svg')] bg-cover bg-no-repeat bg-center */
