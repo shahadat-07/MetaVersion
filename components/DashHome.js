@@ -66,7 +66,7 @@ const DashHome = () => {
         <ImageLevel src={LevelTen} />
         <div style = {{
           background: 'linear-gradient(180deg, #5200FF 0%, rgba(0, 0, 0, 0.92) 100%)',
-        }} className="rotate-90 md:rotate-0 w-[92%] h-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"> </div>
+        }} className="rotate-90 md:rotate-0 w-[74vw] h-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"> </div>
       </div>
 
     </section>
