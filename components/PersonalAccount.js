@@ -24,7 +24,7 @@ const OurTeam = () => {
 
   return (
     <section
-      className="bg-[#140C25] w-[100vw] relative"
+      className="bg-[#140C25] w-[100vw] relative overflow-y-scroll md:overflow-hidden"
     >
       <div className="bg-[#1F2736] w-screen fixed top-[55px] md:top-[75px] 3xl:top-[110px]">
         <div className="container flex justify-around mx-auto px-4 sm:px-16 3xl:px-0 w-screen 3xl:max-w-[2000px]">

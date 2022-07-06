@@ -1,8 +1,11 @@
 import React from "react";
 
+
 const Merch = () => {
   return (
-<h1 className='text-white'>Dashboard settings page</h1>
+   <div className="w-screen h-[60vh] bg-red-300">
+ dkfjdkjfkdj
+   </div>
   );
 };
 

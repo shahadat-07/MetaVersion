@@ -11,8 +11,8 @@ const Guides = () => {
   return (
     <section className="mt-10">
       <div className="p-4 grid gap-6 md:gap-4 2xl:gap-8 md:grid-cols-4 md:grid-rows-4 max-w-5xl 2xl:max-w-7xl 3xl:max-w-[1800px] h-[70vh] w-screen">
-        <div className="md:col-span-3 md:row-span-2 md:grid md:grid-cols-5 md:gap-4 2xl:gap-8">
-          <div className="md:col-span-3 bg-conference rounded-[30px] flex items-end">
+        <div className="md:col-span-3 md:row-span-2 md:grid md:grid-cols-5 gap-6 2xl:gap-8">
+          <div className="md:col-span-3 bg-conference rounded-[30px] flex items-end h-[250px] md:h-auto mb-6 md:mb-0">
             <div
               style={{ background: "rgba(0, 0, 0, 0.5)" }}
               className="flex py-1 space-x-4 pl-10 w-full"
@@ -37,8 +37,8 @@ const Guides = () => {
             </p>
           </div>
         </div>
-        <div className="bg-nft md:col-start-1 md:col-span-3 md:row-start-3 md:row-span-2 rounded-[30px]">
-          <div className="max-w-lg ml-10 mt-10 ">
+        <div className="bg-nft md:col-start-1 md:col-span-3 md:row-start-3 md:row-span-2 rounded-[30px] py-6">
+          <div className="max-w-lg ml-10 mt-4 md:mt-10 ">
             <p className="text-white text-xl 3xl:text-4xl mb-4 3xl:mb-6">
               El Salvador buys 21 NFT
             </p>
@@ -57,15 +57,18 @@ const Guides = () => {
             </Link>
           </div>
         </div>
-        <div className="md:row-span-4 text-white border border-gray-700 rounded-[16px]">
+        <div className="md:row-span-4 text-white border border-gray-700 rounded-[16px] pb-8">
+          <div className="relative h-48 ">
           <Image
             src={t3}
             alt="Conference Image"
+            layout="fill"
             // width={400}
             // height={300}
           />
-          <div className="p-3">
-            <h1 className="mb-3 3xl:mb-6 3xl:text-3xl">
+          </div>
+          <div className="p-3 pb-10 md:pb-0">
+            <h1 className="mb-3 text-lg 3xl:mb-6 3xl:text-3xl">
               NFT LOREM UPSUmNFT LOREM UPSUm
             </h1>
             <p className="text-sm mb-2 3xl:mb-5 3xl:text-2xl">
