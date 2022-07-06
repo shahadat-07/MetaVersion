@@ -59,8 +59,8 @@ const Guides = () => {
             </Link>
           </div>
         </div>
-        <div className="md:row-span-4 text-white border border-gray-700 rounded-[16px] pt-5 pb-12">
-          <div className="relative h-48 md:hidden ">
+        <div className="md:row-span-4 text-white border border-gray-700 rounded-[16px] py-5">
+          <div className="relative h-48 md:hidden">
           <Image
             src={t3}
             alt="Conference Image"
@@ -95,6 +95,7 @@ const Guides = () => {
             </div>
           </div>
         </div>
+        <div className="bg-yellow-500 h-20 w-20 opacity-0"> </div>
       </div>
     </section>
   );
