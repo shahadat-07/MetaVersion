@@ -95,7 +95,7 @@ const Guides = () => {
             </div>
           </div>
         </div>
-        <div className="bg-yellow-500 h-20 w-20 opacity-0"> </div>
+        <div className="bg-yellow-500 h-14 w-14 opacity-0"> </div>
       </div>
     </section>
   );
