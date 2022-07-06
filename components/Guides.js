@@ -28,9 +28,8 @@ const Guides = () => {
               </div>
             </div>
           </div>
-          <div className="md:col-span-2 border border-gray-700 rounded-[30px] py-5">
+          <div className="md:col-span-2 border border-gray-700 rounded-[30px] py-5 md:py-0">
             <div className="bg-tree h-[250px] md:h-[150px] 2xl:h-2/3 3xl:h-[300px]">
-              
             </div>
             <p className="text-white text-sm p-3 3xl:text-2xl">
               Accepting cryptocurrency is &quot;a logical step&quot; for the
@@ -59,7 +58,7 @@ const Guides = () => {
             </Link>
           </div>
         </div>
-        <div className="md:row-span-4 text-white border border-gray-700 rounded-[16px] py-5">
+        <div className="md:row-span-4 text-white border border-gray-700 rounded-[16px] py-5 md:py-0">
           <div className="relative h-48 md:hidden">
           <Image
             src={t3}
@@ -95,7 +94,7 @@ const Guides = () => {
             </div>
           </div>
         </div>
-        <div className="bg-yellow-500 h-14 w-14 opacity-0"> </div>
+        <div className="bg-yellow-500 h-14 w-14 opacity-0 md:hidden"> </div>
       </div>
     </section>
   );
