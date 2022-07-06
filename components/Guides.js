@@ -28,8 +28,10 @@ const Guides = () => {
               </div>
             </div>
           </div>
-          <div className="md:col-span-2 border border-gray-700 rounded-[30px]">
-            <div className="bg-tree h-[150px] 2xl:h-2/3 3xl:h-[300px]"></div>
+          <div className="md:col-span-2 border border-gray-700 rounded-[30px] py-5">
+            <div className="bg-tree h-[250px] md:h-[150px] 2xl:h-2/3 3xl:h-[300px]">
+              
+            </div>
             <p className="text-white text-sm p-3 3xl:text-2xl">
               Accepting cryptocurrency is &quot;a logical step&quot; for the
               company, an executive says, and &quot;separates us from our
@@ -57,7 +59,7 @@ const Guides = () => {
             </Link>
           </div>
         </div>
-        <div className="md:row-span-4 text-white border border-gray-700 rounded-[16px] pb-8">
+        <div className="md:row-span-4 text-white border border-gray-700 rounded-[16px] pt-5 pb-12">
           <div className="relative h-48 md:hidden ">
           <Image
             src={t3}
@@ -74,7 +76,7 @@ const Guides = () => {
 
           />
           </div>
-          <div className="p-3 pb-10 md:pb-0">
+          <div className="p-3">
             <h1 className="mb-3 text-lg 3xl:mb-6 3xl:text-3xl">
               NFT LOREM UPSUmNFT LOREM UPSUm
             </h1>
