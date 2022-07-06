@@ -15,7 +15,7 @@ const Guides = () => {
           <div className="md:col-span-3 bg-conference rounded-[30px] flex items-end h-[250px] md:h-auto mb-6 md:mb-0">
             <div
               style={{ background: "rgba(0, 0, 0, 0.5)" }}
-              className="flex py-1 space-x-4 pl-10 w-full"
+              className="flex py-1 space-x-4 pl-10 w-full rounded-b-[30px]"
             >
               <p className="text-white font-verdana">Crypto conference</p>
               <div className="relative">
@@ -58,13 +58,20 @@ const Guides = () => {
           </div>
         </div>
         <div className="md:row-span-4 text-white border border-gray-700 rounded-[16px] pb-8">
-          <div className="relative h-48 ">
+          <div className="relative h-48 md:hidden ">
           <Image
             src={t3}
             alt="Conference Image"
             layout="fill"
             // width={400}
             // height={300}
+          />
+          </div>
+          <div className="hidden md:block ">
+          <Image
+            src={t3}
+            alt="Conference Image"
+
           />
           </div>
           <div className="p-3 pb-10 md:pb-0">
