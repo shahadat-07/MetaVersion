@@ -118,8 +118,10 @@ footer {
 .bg-tree{
   background-image: url("/tree.svg");
   background-repeat: no-repeat;
+  background-position:top center
+
   /* background-size: 'full 600px'; */
-  background-position: top center;
+  /* background-position: 0px -15px; */
   /* background-size: 50%; */
   
 }

@@ -32,7 +32,7 @@ const OurTeam = () => {
             onClick={() => {
               setName("home");
             }}
-            className={`focus:bg-[#5E45F5] p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-3xl 3xl:p-8`}
+            className={`focus:bg-[#5E45F5] p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-2xl 3xl:p-8`}
           >
             Home
           </button>
@@ -40,31 +40,31 @@ const OurTeam = () => {
             onClick={() => {
               setName("guides");
             }}
-            className={`focus:bg-[#5E45F5] p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-3xl 3xl:p-8`}
+            className={`focus:bg-[#5E45F5] p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-2xl 3xl:p-8`}
           >
             Guides
           </button>
           <button
             onClick={() => setName("card")}
-            className={`focus:bg-[#5E45F5] hidden md:block p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-3xl 3xl:p-8`}
+            className={`focus:bg-[#5E45F5] hidden md:block p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-2xl 3xl:p-8`}
           >
             Add a new card
           </button>
           <button
             onClick={() => setName("card")}
-            className={`focus:bg-[#5E45F5] md:hidden p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-3xl 3xl:p-8`}
+            className={`focus:bg-[#5E45F5] md:hidden p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-2xl 3xl:p-8`}
           >
             Card
           </button>
           <button
             onClick={() => setName("merch")}
-            className={`focus:bg-[#5E45F5] p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-3xl 3xl:p-8`}
+            className={`focus:bg-[#5E45F5] p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-2xl 3xl:p-8`}
           >
             Merch
           </button>
           <button
             onClick={() => setName("settings")}
-            className={`focus:bg-[#5E45F5] p-3 sm:p:-4 text-white font-extended text-xs sm:text-sm 3xl:text-3xl 3xl:p-8`}
+            className={`focus:bg-[#5E45F5] p-3 sm:p:-4 text-white font-extended text-xs sm:text-sm 3xl:text-2xl 3xl:p-8`}
           >
             Settings
           </button>
