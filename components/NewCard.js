@@ -13,7 +13,7 @@ const NewCard = () => {
 
   const WrapperRow = ({ children }) => {
     return (
-      <div className="mb-3 md:mb-4 2xl:mb-8 3xl:mb-14 flex flex-col md:flex-row justify-between">
+      <div className="mb-3 md:mb-3 2xl:mb-8 3xl:mb-14 flex flex-col md:flex-row justify-between">
         {" "}
         {children}{" "}
       </div>
@@ -87,7 +87,7 @@ const NewCard = () => {
   };
 
   return (
-    <div className="w-full max-w-2xl md:max-w-3xl 2xl:max-w-4xl 3xl:max-w-screen-2xl	">
+    <div className="w-full max-w-2xl md:max-w-3xl 2xl:max-w-4xl 3xl:max-w-screen-2xl mt-10">
       <form>
         <div>
           <LabelBox
