@@ -106,7 +106,7 @@ function Carousel() {
               return (
                 <div
                   key={index}
-                  className="carousel-item text-center relative w-[335px] h-[400px] 3xl:w-[535px] 3xl:h-[600] snap-start bg-[#151220] rounded-xl"
+                  className="carousel-item text-center relative w-[300px] md:w-[335px] h-[400px] 3xl:w-[535px] 3xl:h-[600] snap-start bg-[#151220] rounded-xl"
                 >
                   <div className="h-full w-full aspect-square bg-origin-padding bg-left-top bg-cover bg-no-repeat z-0 flex items-center justify-center">
                     <img
