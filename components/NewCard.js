@@ -3,8 +3,14 @@ import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import Image from "next/image";
+import ReactFlagsSelect from "react-flags-select";
+
 
 const NewCard = () => {
+
+  const [selected, setSelected] = useState("US");
+
+
   const WrapperRow = ({ children }) => {
     return (
       <div className="mb-3 md:mb-4 2xl:mb-8 3xl:mb-14 flex flex-col md:flex-row justify-between">
@@ -139,7 +145,11 @@ const NewCard = () => {
           />
         </WrapperRow>
 
-        <WrapperRow> </WrapperRow>
+          <ReactFlagsSelect
+            selected={selected}
+            onSelect={(code) => setSelected(code)}
+            className="mb-4 border border-gray-600"
+          />
 
         <button
           className="bg-[#553CDF] w-full rounded-3xl text-white font-medium py-3 px-4 3xl:text-4xl 3xl:p-8  focus:outline-none focus:shadow-outline font-extended"
@@ -147,6 +157,8 @@ const NewCard = () => {
         >
           Add a new card
         </button>
+
+
       </form>
     </div>
   );
