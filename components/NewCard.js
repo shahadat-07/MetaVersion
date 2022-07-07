@@ -64,7 +64,7 @@ const NewCard = () => {
     return (
       <div>
         <label
-          className={`block text-white font-medium md:mb-1 2xl:mb-4 3xl:mb-8 font-narrow 3xl:text-4xl 2xl:text-xl ${fontSize}`}
+          className={`block text-white font-medium mb-0.5 2xl:mb-4 3xl:mb-8 font-narrow 3xl:text-4xl 2xl:text-xl ${fontSize}`}
         >
           {labelOne}
         </label>
@@ -87,7 +87,7 @@ const NewCard = () => {
   };
 
   return (
-    <div className="w-full max-w-2xl md:max-w-3xl 2xl:max-w-4xl 3xl:max-w-screen-2xl mt-10">
+    <div className="w-full max-w-2xl md:max-w-3xl 2xl:max-w-4xl 3xl:max-w-screen-2xl mt-14">
       <form>
         <div>
           <LabelBox
