@@ -29,9 +29,9 @@ const Guides = () => {
             </div>
           </div>
           <div className="md:col-span-2 border border-gray-700 rounded-[30px] py-5 md:py-0 3xl:py-5">
-            <div className="bg-tree h-[250px] md:h-[150px]  3xl:h-[250px]">
+            <div className="bg-tree h-[250px] md:h-[140px] 3xl:h-[250px]">
             </div>
-            <p className="text-white text-sm p-3 3xl:text-xl">
+            <p className="text-white text-[13px] p-2 3xl:text-xl">
               Accepting cryptocurrency is &quot;a logical step&quot; for the
               company, an executive says, and &quot;separates us from our
               industry peers.&quot;....
@@ -39,11 +39,11 @@ const Guides = () => {
           </div>
         </div>
         <div className="bg-nft md:col-start-1 md:col-span-3 md:row-start-3 md:row-span-2 rounded-[30px] py-6">
-          <div className="max-w-lg ml-10 mt-4 md:mt-8 2xl:mt-10 ">
-            <p className="text-white lg:text-xl 3xl:text-4xl mb-3 3xl:mb-6">
+          <div className="max-w-lg ml-10 mt-2 2xl:mt-10 ">
+            <p className="text-white mb-2 lg:text-xl 3xl:text-4xl 3xl:mb-6">
               El Salvador buys 21 NFT
             </p>
-            <p className="text-white mb-6 3xl:mb-12 3xl:text-xl">
+            <p className="text-white text-[15px] mb-6 3xl:mb-12 3xl:text-xl">
               {" "}
               Lorem Ipsum lorem ipsumLorem Ipsum lorem ipsumLorem Ipsum lorem
               ipsumLorem Ipsum lorem ipsumLorem Ipsum lorem ipsumLorem Ipsum
@@ -51,7 +51,7 @@ const Guides = () => {
             </p>
             <Link href="#">
               <a
-                className={`font-extended text-sm 2xl:text-base 3xl:text-xl text-center font-medium text-[#F2F2F2] py-3 3xl:py-4 px-8 3xl:px-12 rounded-[80px] bg-[#553CDF]`}
+                className={`font-extended text-sm 2xl:text-base 3xl:text-xl text-center font-medium text-[#F2F2F2] py-2.5 3xl:py-4 px-6 3xl:px-12 rounded-[80px] bg-[#553CDF]`}
               >
                 Read more
               </a>
@@ -64,30 +64,26 @@ const Guides = () => {
             src={t3}
             alt="Conference Image"
             layout="fill"
-            // width={400}
-            // height={300}
           />
           </div>
           <div className="hidden md:block text-center 3xl:py-5">
           <Image
             src={t3}
-            alt="Conference Image"
+            alt="T3 Image"
           />
           </div>
           <div className="p-3">
-            <h1 className="mb-3 text-lg 3xl:mb-6 3xl:text-2xl">
+            <h1 className="mb-3 3xl:mb-6 3xl:text-2xl">
               NFT LOREM UPSUmNFT LOREM UPSUm
             </h1>
-            <p className="text-sm mb-2 3xl:mb-5 3xl:text-xl">
+            <p className="text-[13px] mb-2 3xl:mb-5 3xl:text-xl">
               Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem
               ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem  Ipsum lorem{" "}
             </p>
             <div className="relative h-[20px] w-[20px] 3xl:w-[50px] 3xl:h-[50px]">
               <Image
                 src={media}
-                alt="Conference Image"
-                // width={20}
-                // height={20}
+                alt="Media Image"
               />
             </div>
           </div>

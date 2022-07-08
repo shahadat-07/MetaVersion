@@ -7,13 +7,20 @@ import giftBox from "../assets/images/gift-box.svg";
 const ImageLevel = ({
   position = "",
   src,
-  width = "90",
-  height = "90",
   boolean,
 }) => {
+
+  let size = 'w-[85px] h-[85px]';
+  if(boolean){
+    size = "w-[130px] h-[130px]";
+  }
+
+
   return (
     <div className={`z-[10000]`}>
-      <Image src={src} alt="Level Image" width={width} height={height} />
+     <div className={`relative ${size}`}>
+       <Image src={src} alt="Level Image" layout="fill"/>
+     </div>
       <div
         className={`${
           boolean ? "block" : "hidden"

@@ -90,7 +90,7 @@ const DashHome = () => {
 
       <div className="relative mt-32 flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-7">
         <ImageLevel src={LevelOne} />
-        <ImageLevel src={LevelTwo}  width="125px" height="125px" boolean="true"/>
+        <ImageLevel src={LevelTwo} boolean="false"/>
         <ImageLevel src={LevelThree} />
         <ImageLevel src={LevelFour} />
         <ImageLevel src={LevelFive} />

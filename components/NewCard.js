@@ -105,6 +105,13 @@ const NewCard = () => {
           </div>
         </div>
 
+        <ReactFlagsSelect
+            selected={selected}
+            onSelect={(code) => setSelected(code)}
+            className="mb-4 border border-gray-600 z-[100000]"
+          />
+
+
         <WrapperRow>
           <LabelBox
             labelOne="CVV number"
@@ -144,12 +151,6 @@ const NewCard = () => {
             placeholder="XXXX"
           />
         </WrapperRow>
-
-          <ReactFlagsSelect
-            selected={selected}
-            onSelect={(code) => setSelected(code)}
-            className="mb-4 border border-gray-600"
-          />
 
         <button
           className="bg-[#553CDF] w-full rounded-3xl text-white font-medium py-3 px-4 3xl:text-4xl 3xl:p-8  focus:outline-none focus:shadow-outline font-extended"
