@@ -1,24 +1,15 @@
 import Image from "next/image";
-import React from "react";
+import React, {useState} from "react";
 import userImg from "../assets/images/Mask group.svg";
 import grayLogo from "../assets/images/gray-logo.svg";
 import iLogo from "../assets/images/i.svg";
-import border from "../assets/images/border-b.svg";
 import ImageLevel from "./ImageLevel";
-import LevelOne from "../assets/images/level-one.svg"
-import LevelTwo from "../assets/images/level-two.svg"
-import LevelThree from "../assets/images/level-three.svg"
-import LevelFour from "../assets/images/level-four.svg"
-import LevelFive from "../assets/images/level-five.svg"
-import LevelSix from "../assets/images/level-six.svg"
-import LevelSeven from "../assets/images/level-seven.svg"
-import LevelEight from "../assets/images/level-eight.svg"
-import LevelNine from "../assets/images/level-nine.svg"
-import LevelTen from "../assets/images/level-ten.svg"
 import { Menu, Transition } from "@headlessui/react";
 import Button from "./Button"
 import { Fragment } from "react";
 const DashHome = () => {
+
+  const [score, setScore] = useState(5);
 
   const Info = () => {
     return (
@@ -51,6 +42,49 @@ const DashHome = () => {
       </Menu>
     );
   };
+
+  const Levels = [
+    {
+      level: 1,
+      imgSource: "/level-one.svg"
+    },
+    {
+      level: 2,
+      imgSource: "/level-two.svg"
+    },
+    {
+      level: 3,
+      imgSource: "/level-three.svg"
+    },
+    {
+      level: 4,
+      imgSource: "/level-four.svg"
+    },
+    {
+      level: 5,
+      imgSource: "/level-five.svg"
+    },
+    {
+      level: 6,
+      imgSource: "/level-six.svg"
+    },
+    {
+      level: 7,
+      imgSource: "/level-seven.svg"
+    },
+    {
+      level: 8,
+      imgSource: "/level-eight.svg"
+    },
+    {
+      level: 9,
+      imgSource: "/level-nine.svg"
+    },
+    {
+      level: 10,
+      imgSource: "/level-ten.svg"
+    },
+  ]
 
   return (
     <section className="h-[65vh] w-screen md:mt-20 overflow-y-scroll md:overflow-hidden">
@@ -88,9 +122,23 @@ const DashHome = () => {
         <Image src={border}  alt="Logo" width={550} />
       </div> */}
 
+
       <div className="relative mt-32 flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-7">
-        <ImageLevel src={LevelOne} />
-        <ImageLevel src={LevelTwo} boolean="false"/>
+
+        {/* <h1 className="text-white font-bold text-4xl"> Test </h1> */}
+
+        {
+          Levels.map((item, index) => {
+            return(
+              <ImageLevel level={item} key={index} score={score}/>
+              // <h1 className="text-white font-bold text-4xl"> Test </h1>
+            )
+          })
+        }
+
+
+        {/* <ImageLevel src={LevelOne} />
+        <ImageLevel src={LevelTwo} scoreLevel={score} />
         <ImageLevel src={LevelThree} />
         <ImageLevel src={LevelFour} />
         <ImageLevel src={LevelFive} />
@@ -98,7 +146,7 @@ const DashHome = () => {
         <ImageLevel src={LevelSeven} />
         <ImageLevel src={LevelEight} />
         <ImageLevel src={LevelNine} />
-        <ImageLevel src={LevelTen} />
+        <ImageLevel src={LevelTen} /> */}
         <div style = {{
           background: 'linear-gradient(180deg, #5200FF 0%, rgba(0, 0, 0, 0.92) 100%)',
         }} className="rotate-90 md:rotate-0 w-[74vw] h-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"> </div>
