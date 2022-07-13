@@ -36,7 +36,6 @@ const Nav = withNavigationContext(({ fullpage }) => {
     useEffect(() => {
         if (isWeb3Enabled) {
             checkRegister(account);
-            console.log("checking registration status");
         }
     }, [isWeb3Enabled, isRegistered]);
 
@@ -44,6 +43,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
         return (
             <Link
                 onClick={() => {
+                    console.log(slugParam);
                     setTimeout(setIsOpen(false), 50000);
                 }}
                 className={`${
@@ -123,13 +123,17 @@ const Nav = withNavigationContext(({ fullpage }) => {
                             </div>
                         </div>
                         <div className="-mr-2 flex items-center space-x-4 ">
-                            <div className="h-8 md:h-14 w-10 md:w-14 relative ">
-                                <Image
-                                    src={userImg}
-                                    alt="Picture of user"
-                                    layout="fill" // required
-                                />
-                            </div>
+                            {isWeb3Enabled ? (
+                                <div className="h-8 md:h-14 w-10 md:w-14 relative ">
+                                    <Image
+                                        src={userImg}
+                                        alt="Picture of user"
+                                        layout="fill" // required
+                                    />
+                                </div>
+                            ) : (
+                                <></>
+                            )}
                             <ConnectWallet />
                             <button
                                 onClick={() => {
@@ -230,11 +234,15 @@ const Nav = withNavigationContext(({ fullpage }) => {
                                         className="hover:bg-gray-700"
                                     />
 
-                                    <LinkItem
-                                        slug={slug}
-                                        slugParam="personal-account"
-                                        text="Personal Account"
-                                    />
+                                    {isWeb3Enabled && isRegistered ? (
+                                        <LinkItem
+                                            slug={slug}
+                                            slugParam="personal-account"
+                                            text="Personal Account"
+                                        />
+                                    ) : (
+                                        <></>
+                                    )}
                                 </div>
                             </div>
                         )}

@@ -4,11 +4,20 @@ import Image from "next/image";
 import wallet from "../assets/images/wallet-svgrepo-com.svg";
 import { Fragment } from "react";
 import { useMoralis, useWeb3Contract } from "react-moralis";
+import { useNotification } from "web3uikit";
 import contractAbi from "../constants/contracts/MetaVisionRegister.sol/MetaVisionRegister.json";
 
 export default function ConnectWallet() {
-    const { isWeb3Enabled, account, enableWeb3, deactivateWeb3, provider } =
-        useMoralis();
+    const {
+        isWeb3Enabled,
+        isWeb3EnableLoading,
+        account,
+        enableWeb3,
+        deactivateWeb3,
+        provider,
+    } = useMoralis();
+
+    const dispatch = useNotification();
 
     const [telegram, setTelegram] = useState();
     const [email, setEmail] = useState();
@@ -37,7 +46,7 @@ export default function ConnectWallet() {
 
     const handleSuccess = async (tx) => {
         await tx.wait(1);
-        console.log("registered");
+        window.location.reload();
     };
 
     const checkRegister = async (userAddress) => {
@@ -52,7 +61,6 @@ export default function ConnectWallet() {
             await fetch("/api/endpoint", requestOptions)
         ).json();
         setIsRegistered(result.status);
-        console.log(result.status);
     };
 
     const registerNewUser = async (telegram, email, metaverse, account) => {
@@ -72,6 +80,9 @@ export default function ConnectWallet() {
     };
 
     useEffect(() => {
+        if (document.cookie == "isOnline=true") {
+            enableWeb3();
+        }
         if (isWeb3Enabled) {
             checkRegister(account);
         }
@@ -86,7 +97,9 @@ export default function ConnectWallet() {
                             onClick={async () => {
                                 if (!isWeb3Enabled) {
                                     await enableWeb3();
+                                    document.cookie = "isOnline=true";
                                 } else if (isWeb3Enabled) {
+                                    document.cookie = "isOnline=false";
                                     await deactivateWeb3();
                                 }
                             }}
@@ -111,7 +124,9 @@ export default function ConnectWallet() {
                                     : "Connect Wallet"}
                             </p>
                         </Popover.Button>
-                        {!isRegistered ? (
+                        {isWeb3Enabled &&
+                        !isWeb3EnableLoading &&
+                        !isRegistered ? (
                             <Transition
                                 as={Fragment}
                                 enter="transition ease-out duration-200"
