@@ -1604,13 +1604,6 @@ quick-lru@^5.1.1:
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-5.1.1.tgz#366493e6b3e42a3a6885e2e99d18f80fb7a8c932"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
 
-react-awesome-button@^6.4.0:
-  version "6.5.1"
-  resolved "https://registry.yarnpkg.com/react-awesome-button/-/react-awesome-button-6.5.1.tgz#d2103e98dc4d48550efd21dd9ec8f5a09e596407"
-  integrity sha512-94AS4BSIgRCMSHq8wcy3ztostjLK8cqjUX6DT5oWiYNs3uxLv5uk4yFMlzXBjo0I4TERLOZGn66q0xwb+xw5qw==
-  dependencies:
-    web-animation-club "^0.6.0"
-
 react-awesome-slider@^3.1.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/react-awesome-slider/-/react-awesome-slider-3.3.0.tgz#85f06ae96f917fcce1129c40130e4729a30293a0"

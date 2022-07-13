@@ -6,17 +6,13 @@ import trianlgeUp from "../assets/images/triangle-up.svg";
 import giftBox from "../assets/images/gift-box.svg";
 
 const ImageLevel = (props) => {
-  console.log(props.score)
+  // console.log(props.score)
   const { level, imgSource, score } = props.level;
-  // const {score} = props.score;
   let size = "w-[85px] h-[85px]";
   if (level == props.score) {
     size = "w-[130px] h-[130px]";
   }
   const scoreLevel = props.score;
-
-  // const size = "";
-  // let scoreLevel = 3;
 
   return (
     <div className={`z-[10000]`}>
@@ -25,7 +21,7 @@ const ImageLevel = (props) => {
       </div>
       <div
         className={`${
-          level ==  scoreLevel ? "block" : "hidden"
+          level == scoreLevel ? "block" : "hidden"
         } absolute top-0 transform translate-y-[110%] -z-[100] translate-x-[11%]`}
       >
         <div className="relative">
