@@ -119,7 +119,6 @@ const DashHome = () => {
                 <div className="absolute top-1 -right-5">
                   <Info />
                 </div>
-              </div>
             </div>
           </div>
         </div>
@@ -139,6 +138,7 @@ const DashHome = () => {
           {" "}
         </div>
       </div>
+    </div>
     </section>
   );
 };
