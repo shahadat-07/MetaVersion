@@ -123,7 +123,7 @@ const DashHome = () => {
           </div>
         </div>
       </div>
-
+    </div>
       <div className="relative mt-32 flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-7">
         {Levels.map((item, index) => {
           return <ImageLevel level={item} key={index} score={score} />;
@@ -138,7 +138,7 @@ const DashHome = () => {
           {" "}
         </div>
       </div>
-    </div>
+    
     </section>
   );
 };
