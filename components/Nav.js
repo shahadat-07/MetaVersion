@@ -45,7 +45,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
                 onClick={() => {
                   setTimeout(setIsOpen(false), 1500);
                 }}
-                className="focus:outline-0"
+                className="focus:outline-0 flex items-center"
               >
                 <div className="h-8 md:h-14 w-10 md:w-14 relative xl:hidden">
                   <Image
@@ -54,12 +54,12 @@ const Nav = withNavigationContext(({ fullpage }) => {
                     layout="fill" // required
                   />
                 </div>
-                <button
+                <p
                   className="hidden xl:block font-extended text-sm 2xl:text-base text-center
               text-[#F2F2F2] py-3 2xl:py-3 px-4 2xl:px-8 3xl:text-lg rounded-[80px] bg-[#553CDF]"
                 >
                   Connect wallet
-                </button>
+                </p>
               </Popover.Button>
               <Transition
                 as={Fragment}
