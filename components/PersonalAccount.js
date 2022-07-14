@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PageLayout from "./PageLayout";
 import { Link } from "react-awesome-slider/dist/navigation";
 import { DashHome, Guides, NewCard, Merch, Settings } from "./index";
@@ -6,8 +6,9 @@ import { useMoralis } from "react-moralis";
 
 const OurTeam = () => {
     const [name, setName] = useState("");
+    const [isRegistered, setIsRegistered] = useState(false);
 
-    const { isWeb3Enabled } = useMoralis();
+    const { isWeb3Enabled, account } = useMoralis();
 
     let showPage = <DashHome />;
 
@@ -22,6 +23,24 @@ const OurTeam = () => {
     } else if (name === "settings") {
         showPage = <Settings />;
     }
+
+    const checkRegister = async (userAddress) => {
+        const requestOptions = {
+            method: "POST",
+            body: JSON.stringify({
+                methodName: "checkRegister",
+                account: userAddress,
+            }),
+        };
+        const result = await (
+            await fetch("/api/endpoint", requestOptions)
+        ).json();
+        setIsRegistered(result.status);
+    };
+
+    // useEffect(() => {
+    //     checkRegister();
+    // }, [isWeb3Enabled, account]);
 
     if (isWeb3Enabled) {
         return (
@@ -86,7 +105,8 @@ const OurTeam = () => {
                 <PageLayout className="flex flex-col justify-center">
                     <div className="h-screen flex items-center justify-center">
                         <div className="text-white text-3xl">
-                            Please connect wallet to explore Personal Dashboard
+                            Please connect wallet and register to explore
+                            Personal Dashboard
                         </div>
                     </div>
                 </PageLayout>

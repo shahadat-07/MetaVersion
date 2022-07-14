@@ -37,13 +37,6 @@ export default function ConnectWallet() {
         },
     });
 
-    const { runContractFunction: getUser } = useWeb3Contract({
-        abi: contractAbi,
-        contractAddress: contractAddress,
-        functionName: "getUser",
-        params: {},
-    });
-
     const handleSuccess = async (tx) => {
         await tx.wait(1);
         window.location.reload();

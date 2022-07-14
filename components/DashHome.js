@@ -12,11 +12,27 @@ import { useMoralis } from "react-moralis";
 const DashHome = () => {
     const [score, setScore] = useState(1);
     const [userData, setUserData] = useState();
+    const [isRegistered, setIsRegistered] = useState(false);
 
     const { isWeb3Enabled, account } = useMoralis();
 
+    const checkRegister = async (userAddress) => {
+        const requestOptions = {
+            method: "POST",
+            body: JSON.stringify({
+                methodName: "checkRegister",
+                account: userAddress,
+            }),
+        };
+        const result = await (
+            await fetch("/api/endpoint", requestOptions)
+        ).json();
+        setIsRegistered(result.status);
+    };
+
     const updateUI = async () => {
-        if (isWeb3Enabled) {
+        await checkRegister(account);
+        if (isWeb3Enabled && isRegistered) {
             const postReqOptions = {
                 method: "POST",
                 body: JSON.stringify({
@@ -54,7 +70,7 @@ const DashHome = () => {
 
     useEffect(() => {
         updateUI();
-    }, [isWeb3Enabled, account]);
+    }, [isWeb3Enabled, isRegistered]);
 
     const Info = () => {
         return (
