@@ -13,6 +13,8 @@ import Logo from "../assets/images/Logo.svg";
 
 const Nav = withNavigationContext(({ fullpage }) => {
   const { slug } = fullpage.navigation;
+
+
   const [isOpen, setIsOpen] = useState(false);
 
   const LinkItem = ({ slug, slugParam, text, className = "" }) => {
@@ -191,6 +193,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
                     slug={slug}
                     slugParam="personal-account"
                     text="Personal Account"
+                    className=""
                   />
                 </div>
               </div>
