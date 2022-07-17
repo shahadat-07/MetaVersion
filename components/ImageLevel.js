@@ -50,6 +50,7 @@ const ImageLevel = (props) => {
   const scoreLevel = props.score;
 
   return (
+    <>
     <div className="z-10">
       <div className={`relative ${size}`}>
         <Image src={imgSource} alt="Level Image" layout="fill" />
@@ -67,12 +68,12 @@ const ImageLevel = (props) => {
             height={100}
           />
         </div>
-
-        <div className="absolute top-[30px] left-[18px]">
-          <Info />
-        </div>
       </div>
     </div>
+    <div className="absolute top-[150px] left-[175px]">
+       <Info />
+     </div>
+    </>
   );
 };
 
