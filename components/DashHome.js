@@ -8,6 +8,7 @@ import { Menu, Transition } from "@headlessui/react";
 import Button from "./Button";
 import { Fragment } from "react";
 import { useMoralis } from "react-moralis";
+import GiftBox from './GiftBox';
 
 const DashHome = () => {
     const [score, setScore] = useState(1);
@@ -147,6 +148,7 @@ const DashHome = () => {
     if (isWeb3Enabled) {
         return (
             <section className="h-[65vh] w-screen md:mt-20 overflow-y-scroll md:overflow-hidden">
+                
                 <div className="relative flex justify-center items-center">
                     <div className="flex flex-col md:flex-row justify-between items-center w-[550px] p-4 border-b border-[#553CDF]">
                         <div className="flex space-x-8 items-center">
