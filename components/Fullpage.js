@@ -16,6 +16,7 @@ import PersonalAccount from "../pages/personal-account";
 const Slider = withNavigationHandlers(AwesomeSlider);
 
 export default withNavigationContext(({ fullpage }) => {
+
     const isFirstLoad = useRef(true);
     const animation = fullpage.navigation.animation || `foldOutAnimation`;
 

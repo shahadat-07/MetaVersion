@@ -126,3 +126,9 @@ footer {
   background-position:top center
 }
 
+.visibility {
+  display:none!important;
+}
+/* button.awssld__next {
+  display:none!important;
+} */

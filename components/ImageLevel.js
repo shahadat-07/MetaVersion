@@ -4,6 +4,7 @@ import React from "react";
 import trianlgeDown from "../assets/images/triangle-down.svg";
 import trianlgeUp from "../assets/images/triangle-up.svg";
 import giftBox from "../assets/images/gift-box.svg";
+import GiftBox from './GiftBox';
 
 const ImageLevel = (props) => {
   // console.log(props.score)
@@ -15,7 +16,7 @@ const ImageLevel = (props) => {
   const scoreLevel = props.score;
 
   return (
-    <div className={`z-[10000]`}>
+    <div className={`z-[10]`}>
       <div className={`relative ${size}`}>
         <Image src={imgSource} alt="Level Image" layout="fill" />
       </div>
@@ -32,6 +33,10 @@ const ImageLevel = (props) => {
             height={100}
           />
         </div>
+
+        {/* <div className="absolute -top-[60px] left-[30px]">
+          <GiftBox/>
+        </div> */}
       </div>
     </div>
     );

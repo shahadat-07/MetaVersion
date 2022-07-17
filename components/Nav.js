@@ -14,6 +14,19 @@ import ConnectWallet from "./ConnectWallet";
 
 const Nav = withNavigationContext(({ fullpage }) => {
     const { slug } = fullpage.navigation;
+
+    useEffect(() => {
+        const element = document.getElementsByClassName("awssld__next");
+        const button = element[0];
+        if(slug === 'our-team'){
+            button.classList.add('visibility');
+        }else {
+            button.classList.remove('visibility');
+        }
+    }, [slug] )
+
+    console.log(slug);
+
     const [isOpen, setIsOpen] = useState(false);
 
     const { isWeb3Enabled, account } = useMoralis();
@@ -243,6 +256,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
                                     ) : (
                                         <></>
                                     )}
+                                    
                                 </div>
                             </div>
                         )}
