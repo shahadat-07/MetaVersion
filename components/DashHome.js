@@ -150,8 +150,8 @@ const DashHome = () => {
             <section className="h-[65vh] w-screen md:mt-20 overflow-y-scroll md:overflow-hidden">
                 
                 <div className="relative flex justify-center items-center">
-                    <div className="flex flex-col md:flex-row justify-between items-center w-[550px] p-4 border-b border-[#553CDF]">
-                        <div className="flex space-x-8 items-center">
+                    <div className="flex flex-col md:flex-row justify-between items-center space-x-10  p-4 border-b border-[#553CDF]">
+                        <div className="flex space-x-6 items-center">
                             <div className="bg-frame">
                                 <div className="relative mt-2 h-24 w-28 overflow-clip">
                                     <Image
@@ -164,7 +164,7 @@ const DashHome = () => {
                             <h1 className="text-white font-extended text-2xl leading-9">
                                 {userData != undefined
                                     ? `@${userData.user_telegram}`
-                                    : ""}
+                                    : "Guest"}
                             </h1>
                         </div>
                         <div className="flex flex-col mt-6 md:mt-0 justify-center">
