@@ -18,14 +18,12 @@ const Nav = withNavigationContext(({ fullpage }) => {
     useEffect(() => {
         const element = document.getElementsByClassName("awssld__next");
         const button = element[0];
-        if(slug === 'our-team'){
-            button.classList.add('visibility');
-        }else {
-            button.classList.remove('visibility');
+        if (slug === "our-team") {
+            button.classList.add("visibility");
+        } else {
+            button.classList.remove("visibility");
         }
-    }, [slug] )
-
-    console.log(slug);
+    }, [slug]);
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -56,7 +54,6 @@ const Nav = withNavigationContext(({ fullpage }) => {
         return (
             <Link
                 onClick={() => {
-                    console.log(slugParam);
                     setTimeout(setIsOpen(false), 50000);
                 }}
                 className={`${
@@ -256,7 +253,6 @@ const Nav = withNavigationContext(({ fullpage }) => {
                                     ) : (
                                         <></>
                                     )}
-                                    
                                 </div>
                             </div>
                         )}

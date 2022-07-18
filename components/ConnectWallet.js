@@ -5,7 +5,7 @@ import wallet from "../assets/images/wallet-svgrepo-com.svg";
 import { Fragment } from "react";
 import { useMoralis, useWeb3Contract } from "react-moralis";
 import { useNotification } from "web3uikit";
-import contractAbi from "../constants/contracts/MetaVisionRegister.sol/MetaVisionRegister.json";
+import contractAbi from "../constants/contracts/MetaVisionRegister.sol/MyVerseRegister.json";
 
 export default function ConnectWallet() {
     const {

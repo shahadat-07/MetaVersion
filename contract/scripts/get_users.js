@@ -2,7 +2,7 @@ const { ethers } = require("hardhat");
 
 const getUsers = async () => {
     const owner = (await ethers.getSigners())[0];
-    const contract = await ethers.getContract("MetaVisionRegister");
+    const contract = await ethers.getContract("MyVerseRegister");
 
     console.log((await contract.connect(owner).getNumberOfUsers()).toString());
 };

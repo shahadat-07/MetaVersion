@@ -3,8 +3,9 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-error MetaVision__RegistrationClosed();
-error MetaVision__AlreadyRegistered();
+error MyVerse__RegistrationClosed();
+error MyVerse__AlreadyRegistered();
+error MyVerse__NotRegistered();
 
 /**
  * @title Smart Contract for register in MetaVision Network
@@ -14,7 +15,7 @@ error MetaVision__AlreadyRegistered();
  * @dev Only register function is available for call
  */
 
-contract MetaVisionRegister is Ownable {
+contract MyVerseRegister is Ownable {
     struct User {
         string telegramUsername;
         string eMail;
@@ -24,23 +25,30 @@ contract MetaVisionRegister is Ownable {
     }
 
     bool s_isOpened = false;
-    mapping(address => User) private _addressToUser;
+    mapping(address => User) private s_addressToUser;
     User[] private s_users;
 
     modifier isOpened() {
         if (s_isOpened) {
             _;
         } else {
-            revert MetaVision__RegistrationClosed();
+            revert MyVerse__RegistrationClosed();
         }
     }
 
     modifier onlyOnce() {
-        if (_addressToUser[msg.sender].isRegistered) {
-            revert MetaVision__AlreadyRegistered();
+        if (s_addressToUser[msg.sender].isRegistered) {
+            revert MyVerse__AlreadyRegistered();
         } else {
             _;
         }
+    }
+
+    modifier onlyRegistered() {
+        if (!s_addressToUser[msg.sender].isRegistered) {
+            revert MyVerse__NotRegistered();
+        }
+        _;
     }
 
     event UserRegistered(address indexed _newMember);
@@ -64,9 +72,22 @@ contract MetaVisionRegister is Ownable {
             msg.sender,
             true
         );
-        _addressToUser[msg.sender] = user;
+        s_addressToUser[msg.sender] = user;
         s_users.push(user);
         emit UserRegistered(msg.sender);
+    }
+
+    function updateUserData(string memory telegram, string memory email)
+        external
+        onlyRegistered
+    {
+        User storage user = s_addressToUser[msg.sender];
+        if (checkStringLength(telegram) > 1) {
+            user.telegramUsername = telegram;
+        }
+        if (checkStringLength(email) > 1) {
+            user.eMail = email;
+        }
     }
 
     /* OWNER FUNCTIONS */
@@ -95,7 +116,7 @@ contract MetaVisionRegister is Ownable {
      */
 
     function getUser() external view returns (User memory) {
-        return _addressToUser[msg.sender];
+        return s_addressToUser[msg.sender];
     }
 
     /**
@@ -119,5 +140,15 @@ contract MetaVisionRegister is Ownable {
 
     function getRegistrationState() external view returns (bool) {
         return s_isOpened;
+    }
+
+    function getAllUsers() external view onlyOwner returns (User[] memory) {
+        return s_users;
+    }
+
+    /* PRIVATE FUNCTIONS */
+
+    function checkStringLength(string memory s) private pure returns (uint256) {
+        return bytes(s).length;
     }
 }

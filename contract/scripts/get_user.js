@@ -1,15 +1,14 @@
 const { ethers } = require("hardhat");
 
-const openRegister = async () => {
+const getUsers = async () => {
     const owner = (await ethers.getSigners())[0];
     const contract = await ethers.getContract("MyVerseRegister");
 
-    await contract.connect(owner).openRegistration();
-
-    console.log("Opened!");
+    const userData = await contract.getUser();
+    console.log(userData);
 };
 
-openRegister()
+getUsers()
     .then(() => process.exit(0))
     .catch((e) => {
         console.error(e);

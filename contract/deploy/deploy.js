@@ -14,7 +14,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
 
     log("----------------------------------------------------");
     const args = [];
-    const mvRegister = await deploy("MetaVisionRegister", {
+    const mvRegister = await deploy("MyVerseRegister", {
         from: deployer,
         args: args,
         log: true,
