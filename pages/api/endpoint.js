@@ -17,7 +17,7 @@ export default function handler(req, res) {
         const reqBody = JSON.parse(req.body);
         if (reqBody.methodName == "checkRegister") {
             const account = reqBody.account;
-            const sql = `SELECT score FROM USERS where user_address=${database.escape(
+            const sql = `SELECT score FROM users WHERE user_address=${database.escape(
                 account,
             )}`;
             database.query(sql, (err, result) => {
