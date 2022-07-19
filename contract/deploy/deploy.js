@@ -24,7 +24,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     // Verify the deployment
     if (
         !developmentChains.includes(network.name) &&
-        process.env.ETHERSCAN_API_KEY
+        process.env.BSCSCAN_TESTNET_API
     ) {
         log("Verifying...");
         await verify(mvRegister.address, args);

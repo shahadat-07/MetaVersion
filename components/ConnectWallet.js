@@ -4,7 +4,7 @@ import Image from "next/image";
 import wallet from "../assets/images/wallet-svgrepo-com.svg";
 import { Fragment } from "react";
 import { useMoralis, useWeb3Contract } from "react-moralis";
-import { useNotification } from "web3uikit";
+import { useNotification, Loading } from "web3uikit";
 import contractAbi from "../constants/contracts/MetaVisionRegister.sol/MyVerseRegister.json";
 
 export default function ConnectWallet() {
@@ -14,19 +14,20 @@ export default function ConnectWallet() {
         account,
         enableWeb3,
         deactivateWeb3,
-        provider,
     } = useMoralis();
-
-    const dispatch = useNotification();
 
     const [telegram, setTelegram] = useState();
     const [email, setEmail] = useState();
     const [metaverse, setMetaverse] = useState();
     const [isRegistered, setIsRegistered] = useState(false);
 
-    const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+    const contractAddress = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS;
 
-    const { runContractFunction: register } = useWeb3Contract({
+    const {
+        runContractFunction: register,
+        isLoading,
+        isFetching,
+    } = useWeb3Contract({
         abi: contractAbi,
         contractAddress: contractAddress,
         functionName: "register",
@@ -79,7 +80,7 @@ export default function ConnectWallet() {
         if (isWeb3Enabled) {
             checkRegister(account);
         }
-    }, [isWeb3Enabled, isRegistered]);
+    }, [isWeb3Enabled, isRegistered, account]);
 
     return (
         <div className="xl:px-4">
@@ -90,6 +91,36 @@ export default function ConnectWallet() {
                             onClick={async () => {
                                 if (!isWeb3Enabled) {
                                     await enableWeb3();
+                                    try {
+                                        await window.ethereum.request({
+                                            method: "wallet_switchEthereumChain",
+                                            params: [{ chainId: "0x61" }],
+                                        });
+                                    } catch {
+                                        if (err.code === 4902) {
+                                            await window.ethereum.request({
+                                                method: "wallet_addEthereumChain",
+                                                params: [
+                                                    {
+                                                        chainName:
+                                                            "Smart Chain",
+                                                        chainId: "0x61",
+                                                        nativeCurrency: {
+                                                            name: "Binance Coin",
+                                                            decimals: 18,
+                                                            symbol: "BNB",
+                                                        },
+                                                        rpcUrls: [
+                                                            "https://bsc-dataseed.binance.org/",
+                                                        ],
+                                                        blockExplorerUrls: [
+                                                            "https://bscscan.com",
+                                                        ],
+                                                    },
+                                                ],
+                                            });
+                                        }
+                                    }
                                     document.cookie = "isOnline=true";
                                 } else if (isWeb3Enabled) {
                                     document.cookie = "isOnline=false";
@@ -132,99 +163,122 @@ export default function ConnectWallet() {
                                 <Popover.Panel className="mt-3 absolute -right-[80%] sm:right-0 z-10 w-[300px] h-[400] md:w-[400px] md:h-[500px]">
                                     <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5">
                                         <div className="relative bg-[#553CDF] rounded-md">
-                                            <form
-                                                className="rounded px-8 pt-6 pb-8 mb-4 text-white"
-                                                onSubmit={async (e) => {
-                                                    e.preventDefault();
-                                                    await register({
-                                                        onSuccess: async (
-                                                            tx,
-                                                        ) => {
-                                                            await handleSuccess(
+                                            {isFetching || isLoading ? (
+                                                <div
+                                                    style={{
+                                                        backgroundColor:
+                                                            "#ECECFE",
+                                                        borderRadius: "8px",
+                                                        padding: "20px",
+                                                        display: "flex",
+                                                        justifyContent:
+                                                            "center",
+                                                    }}
+                                                >
+                                                    <Loading
+                                                        size={40}
+                                                        spinnerColor="#2E7DAF"
+                                                        text="Registration pending..."
+                                                    />
+                                                </div>
+                                            ) : (
+                                                <form
+                                                    className="rounded px-8 pt-6 pb-8 mb-4 text-white"
+                                                    onSubmit={async (e) => {
+                                                        e.preventDefault();
+                                                        await register({
+                                                            onSuccess: async (
                                                                 tx,
-                                                            );
-                                                            await registerNewUser(
-                                                                telegram,
-                                                                email,
-                                                                metaverse,
-                                                                account,
-                                                            );
-                                                        },
-                                                    });
-                                                }}
-                                            >
-                                                <p className="mb-4 text-center font-narrow font-semibold">
-                                                    First time here ? Please
-                                                    register.
-                                                </p>
+                                                            ) => {
+                                                                await handleSuccess(
+                                                                    tx,
+                                                                );
+                                                                await registerNewUser(
+                                                                    telegram,
+                                                                    email,
+                                                                    metaverse,
+                                                                    account,
+                                                                );
+                                                            },
+                                                        });
+                                                    }}
+                                                >
+                                                    <p className="mb-4 text-center font-narrow font-semibold">
+                                                        First time here ? Please
+                                                        register.
+                                                    </p>
 
-                                                <div className="mb-2">
-                                                    <label
-                                                        className="block text-sm font-medium mb-2 font-extended text-white"
-                                                        htmlFor="telegram"
-                                                    >
-                                                        Telegram
-                                                    </label>
-                                                    <input
-                                                        className="shadow appearance-none border bg-gray-200 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                                                        id="text"
-                                                        type="text"
-                                                        placeholder="@example"
-                                                        required={true}
-                                                        onChange={(e) => {
-                                                            setTelegram(
-                                                                e.target.value,
-                                                            );
-                                                        }}
-                                                    />
-                                                </div>
-                                                <div className="mb-2">
-                                                    <label
-                                                        className="block text-sm font-medium mb-2 font-extended text-white"
-                                                        htmlFor="email"
-                                                    >
-                                                        E-mail
-                                                    </label>
-                                                    <input
-                                                        className="shadow appearance-none border bg-gray-200 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                                                        id="email"
-                                                        type="email"
-                                                        placeholder="info@example.com"
-                                                        required={true}
-                                                        onChange={(e) => {
-                                                            setEmail(
-                                                                e.target.value,
-                                                            );
-                                                        }}
-                                                    />
-                                                </div>
-                                                <div className="mb-2">
-                                                    <label
-                                                        className="block  text-sm font-medium mb-2 font-extended text-white"
-                                                        htmlFor="text"
-                                                    >
-                                                        Metaverse
-                                                    </label>
-                                                    <input
-                                                        className="shadow appearance-none border bg-gray-200 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                                                        id="text"
-                                                        type="text"
-                                                        placeholder="Decentraland"
-                                                        required={true}
-                                                        onChange={(e) => {
-                                                            setMetaverse(
-                                                                e.target.value,
-                                                            );
-                                                        }}
-                                                    />
-                                                </div>
-                                                <div className="text-center">
-                                                    <button className="bg-[#553CDF] shadow-xl font-extended text-sm md:text-base text-center font-medium text-[#F2F2F2] py-3 px-8 rounded-[80px]">
-                                                        {" "}
-                                                        Register{" "}
-                                                    </button>
-                                                </div>
-                                            </form>
+                                                    <div className="mb-2">
+                                                        <label
+                                                            className="block text-sm font-medium mb-2 font-extended text-white"
+                                                            htmlFor="telegram"
+                                                        >
+                                                            Telegram
+                                                        </label>
+                                                        <input
+                                                            className="shadow appearance-none border bg-gray-200 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                                                            id="text"
+                                                            type="text"
+                                                            placeholder="@example"
+                                                            required={true}
+                                                            onChange={(e) => {
+                                                                setTelegram(
+                                                                    e.target
+                                                                        .value,
+                                                                );
+                                                            }}
+                                                        />
+                                                    </div>
+                                                    <div className="mb-2">
+                                                        <label
+                                                            className="block text-sm font-medium mb-2 font-extended text-white"
+                                                            htmlFor="email"
+                                                        >
+                                                            E-mail
+                                                        </label>
+                                                        <input
+                                                            className="shadow appearance-none border bg-gray-200 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                                                            id="email"
+                                                            type="email"
+                                                            placeholder="info@example.com"
+                                                            required={true}
+                                                            onChange={(e) => {
+                                                                setEmail(
+                                                                    e.target
+                                                                        .value,
+                                                                );
+                                                            }}
+                                                        />
+                                                    </div>
+                                                    <div className="mb-2">
+                                                        <label
+                                                            className="block  text-sm font-medium mb-2 font-extended text-white"
+                                                            htmlFor="text"
+                                                        >
+                                                            Metaverse
+                                                        </label>
+                                                        <input
+                                                            className="shadow appearance-none border bg-gray-200 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                                                            id="text"
+                                                            type="text"
+                                                            placeholder="Decentraland"
+                                                            required={true}
+                                                            onChange={(e) => {
+                                                                setMetaverse(
+                                                                    e.target
+                                                                        .value,
+                                                                );
+                                                            }}
+                                                        />
+                                                    </div>
+                                                    <div className="text-center">
+                                                        <button className="bg-[#553CDF] shadow-xl font-extended text-sm md:text-base text-center font-medium text-[#F2F2F2] py-3 px-8 rounded-[80px]">
+                                                            {" "}
+                                                            Register{" "}
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            )}
                                         </div>
                                     </div>
                                 </Popover.Panel>

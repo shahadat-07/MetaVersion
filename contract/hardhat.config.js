@@ -34,6 +34,11 @@ const POLYGONSCAN_API_KEY =
     process.env.POLYGONSCAN_API_KEY || "Your polygonscan API key";
 const REPORT_GAS = process.env.REPORT_GAS || false;
 
+const BSC_TEST_RPC_URL = process.env.BSC_TEST_RPC_URL;
+const BSC_MAINNET_RPC_URL = process.env.BSC_MAINNET_RPC_URL;
+const BSCSCAN_TESTNET_API = process.env.BSCSCAN_TESTNET_API;
+const BSCSCAN_API_KEY = process.env.BSCSCAN_API_KEY;
+
 module.exports = {
     defaultNetwork: "hardhat",
     networks: {
@@ -80,13 +85,25 @@ module.exports = {
             saveDeployments: true,
             chainId: 137,
         },
+        bscTest: {
+            url: BSC_TEST_RPC_URL,
+            chainId: 97,
+            accounts: [PRIVATE_KEY],
+        },
+        // bscMain: {
+        //     url: BSC_MAINNET_RPC_URL,
+        //     chainId: 56,
+        //     accounts: [PRIVATE_KEY],
+        // },
     },
+
     etherscan: {
-        // npx hardhat verify --network <NETWORK> <CONTRACT_ADDRESS> <CONSTRUCTOR_PARAMETERS>
         apiKey: {
             rinkeby: ETHERSCAN_API_KEY,
             kovan: ETHERSCAN_API_KEY,
             polygon: POLYGONSCAN_API_KEY,
+            bscTestnet: BSCSCAN_TESTNET_API,
+            bsc: BSCSCAN_API_KEY,
         },
     },
     gasReporter: {

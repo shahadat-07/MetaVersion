@@ -121,8 +121,8 @@ contract MyVerseRegister is Ownable {
 
     /**
      * @notice This method returns user info at index in array.
-     * @param _index Index of user in array
-     * @return Returns User struct if user registered in MV system
+     * @param _index Index of user in arrasy
+     * @return Returns User struct if user has registered in MV system
      */
 
     function getUserAt(uint256 _index) external view returns (User memory) {

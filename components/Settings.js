@@ -3,7 +3,7 @@ import { useMoralis, useWeb3Contract } from "react-moralis";
 import contractAbi from "../constants/contracts/MetaVisionRegister.sol/MyVerseRegister.json";
 
 const Settings = () => {
-    const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+    const contractAddress = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS;
     const [newTelegram, setNewTelegram] = useState("");
     const [newEmail, setNewEmail] = useState("");
     const { isWeb3Enabled, account } = useMoralis();
@@ -31,6 +31,7 @@ const Settings = () => {
             };
 
             await fetch("api/endpoint", postOptions);
+            alert("Done!");
         }
     };
 
@@ -39,7 +40,6 @@ const Settings = () => {
             <form
                 onSubmit={(e) => {
                     e.preventDefault();
-                    console.log("Submitted!");
                 }}
             >
                 <div className="mb-4 2xl:mb-8 3xl:mb-14">
@@ -81,12 +81,11 @@ const Settings = () => {
                     type="button"
                     onClick={async () => {
                         if (newEmail.length > 1 || newTelegram.length > 1) {
-                            console.log(newEmail, newTelegram);
                             await updateUserData({
                                 onSuccess: async (tx) => {
                                     await tx.wait(1);
+                                    document.location.reload();
                                     await updateUser(newEmail, newTelegram);
-                                    alert("User data updated!");
                                 },
                             });
                         } else {
