@@ -6,7 +6,53 @@ import { useMoralis } from "react-moralis";
 
 const OurTeam = () => {
     const [name, setName] = useState("");
+
     const [isRegistered, setIsRegistered] = useState(false);
+
+   useEffect(() => {
+    const home = document.getElementById('home');
+    const guides = document.getElementById('guides');
+    const card = document.getElementById('card');
+    const merch = document.getElementById('merch');
+    const settings = document.getElementById('settings');
+
+    if(isRegistered){
+
+        if(name == 'home'){
+            home.classList.add('background')
+        }else{
+            home.classList.remove('background')
+        }
+
+        if(name == 'guides'){
+            guides.classList.add('background')
+        }else{
+            guides.classList.remove('background')
+        }
+
+        if(name == 'card'){
+            card.classList.add('background')
+        }else{
+            card.classList.remove('background')
+        }
+
+        if(name == 'merch'){
+            merch.classList.add('background')
+        }else{
+            merch.classList.remove('background')
+        }
+
+        if(name == 'settings'){
+            settings.classList.add('background')
+        }else{
+            settings.classList.remove('background')
+        }
+    }else{
+        return;
+    }
+
+   }, [isRegistered ,name])
+
 
     const { isWeb3Enabled, account } = useMoralis();
 
@@ -51,7 +97,8 @@ const OurTeam = () => {
                             onClick={() => {
                                 setName("home");
                             }}
-                            className={`focus:bg-[#5E45F5] p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-2xl 3xl:p-8`}
+                            className={`p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-2xl 3xl:p-8`}
+                            id="home"
                         >
                             Home
                         </button>
@@ -59,31 +106,36 @@ const OurTeam = () => {
                             onClick={() => {
                                 setName("guides");
                             }}
-                            className={`focus:bg-[#5E45F5] p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-2xl 3xl:p-8`}
+                            className={` p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-2xl 3xl:p-8`}
+                            id="guides"
                         >
                             Guides
                         </button>
                         <button
                             onClick={() => setName("card")}
-                            className={`focus:bg-[#5E45F5] hidden md:block p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-2xl 3xl:p-8`}
+                            className={` hidden md:block p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-2xl 3xl:p-8`}
+                            id="card"
                         >
                             Add a new card
                         </button>
                         <button
                             onClick={() => setName("card")}
                             className={`focus:bg-[#5E45F5] md:hidden p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-2xl 3xl:p-8`}
+                            id="card"
                         >
                             Card
                         </button>
                         <button
                             onClick={() => setName("merch")}
-                            className={`focus:bg-[#5E45F5] p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-2xl 3xl:p-8`}
+                            className={` p-3 sm:p-4 text-white font-extended text-xs sm:text-sm 3xl:text-2xl 3xl:p-8`}
+                            id="merch"
                         >
                             Merch
                         </button>
                         <button
                             onClick={() => setName("settings")}
-                            className={`focus:bg-[#5E45F5] p-3 sm:p:-4 text-white font-extended text-xs sm:text-sm 3xl:text-2xl 3xl:p-8`}
+                            className={` p-3 sm:p:-4 text-white font-extended text-xs sm:text-sm 3xl:text-2xl 3xl:p-8`}
+                            id="settings"
                         >
                             Settings
                         </button>

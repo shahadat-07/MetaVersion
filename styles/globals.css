@@ -392,6 +392,8 @@ footer {
             transform: translateX(-100%) rotate(0deg) skew(10deg, 10deg);
   }
 }
-
-
 /* Gift Box Design End */
+
+.background{
+  background-color: #5E45F5;
+}
